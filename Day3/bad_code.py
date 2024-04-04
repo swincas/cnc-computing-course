@@ -1,7 +1,7 @@
 import numpy as np
 import random
 
-random.seed(42)
+random.seed(32)
 options = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 groups = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 all = [{'rank': group, 'suit': option} for group in groups for option in options]
