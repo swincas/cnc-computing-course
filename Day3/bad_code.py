@@ -1,11 +1,11 @@
 import numpy as np
 import random
 
-random.seed(32)
-ranks = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-all = [{'rank': ranks, 'suit': suits} for rank in ranks for suit in suits]
-random.shuffle(all)
+random.seed(52)
+options = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+groups = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+all = [{'rank': group, 'suit': option} for group in groups for option in options]
+random.shuffle(all) # shuffle cards
 handout = {f'{i+1}': [] for i in range(4)}
 for _ in range(5):
     for p in handout:
