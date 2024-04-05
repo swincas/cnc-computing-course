@@ -1,7 +1,7 @@
 import numpy as np
 import random
 
-random.seed(42)
+random.seed(32)
 ranks = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 all = [{'rank': ranks, 'suit': suits} for rank in ranks for suit in suits]
