@@ -1,4 +1,5 @@
 #!/bin/bash
+# Slurm stuff
 
 
 # load python modules
