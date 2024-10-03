@@ -1,0 +1,7 @@
+Date: 01/01/2024    # dd/mm/yyyy
+Time: 1300          # 24 hour time hh/mm
+Band: L             # Observing band
+Lengh: 70           # length of observation mins
+RA: 01:10:22.114    # J2000 hh:mm:ss
+DEC: -70:48:40.96   # J2000 deg:arcmin:arcsec
+Group: B            # Observing Group
