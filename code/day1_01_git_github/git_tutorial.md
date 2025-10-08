@@ -289,7 +289,7 @@ gitGraph
 ---
 ## Version-Feature
 
-<div class="mermaid">
+```mermaid
 gitGraph
     commit id: "v0.1"
     branch version1.0
@@ -314,7 +314,7 @@ gitGraph
         merge featureB id: "v1.2"
     checkout main
     merge version2.0 id: "v2.0"
-</div>
+```
 
 * my enhancement on [GitHub Flow](#github-flow)
 * stable main branch
