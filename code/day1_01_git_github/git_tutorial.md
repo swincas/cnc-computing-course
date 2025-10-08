@@ -4,9 +4,10 @@ theme: cn5_style
 ---
 
 <!-- _class: titleslide -->
-# Day 1
+# Control 
+## Git and Github
 
-![bg left:80](../../gfx/TitlePage.png)
+![bg](../../gfx/TitlePage.png)
 <div class="footnote">Image generated with ChatGPT</div>
 
 ---
