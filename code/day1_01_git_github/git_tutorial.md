@@ -287,18 +287,10 @@ gitGraph
 </div>
 
 ---
-<style scoped>
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
 ## Version-Feature
-<div class="container">
-    <div class="col">
+
+<div style="display: flex;">
+    <div style="flex: 1;">
         <div class="mermaid">
         gitGraph
             commit id: "v0.1"
@@ -326,7 +318,7 @@ gitGraph
             merge version2.0 id: "v2.0"
         </div>
     </div>
-    <div class="col">
+    <div style="flex: 1;">>
         <ul>
             <li>my enhancement on <a href=#github-flow>GitHub Flow</a></li>
             <li>stable main branch</li>
