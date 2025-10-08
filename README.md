@@ -17,7 +17,7 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 ## Agenda
 1. VSCode intro
 1. git and github
-    1. setup CodeSnippets repo?
+    1. init CodeSnippets repo
 1. python
     1. venvs
     1. astropy
