@@ -289,49 +289,40 @@ gitGraph
 ---
 ## Version-Feature
 
-<div style="display: flex;">
-    <div style="flex: 1;">
-        <div class="mermaid">
-        gitGraph
-            commit id: "v0.1"
-            branch version1.0
-            checkout version1.0
-                branch featureA
-                checkout featureA
-                    commit id: "devA1"
-                    commit id: "devA2"
-                checkout version1.0
-                merge featureA id: "v0.2"
-            checkout main
-            merge version1.0 id: "v1.0"
-            branch version2.0
-            checkout version2.0
-                commit id: "v1.1" 
-                branch featureB
-                checkout featureB
-                    commit id: "devB1"
-                    commit id: "devB2"
-                    commit id: "devB3"
-                checkout version2.0
-                merge featureB id: "v1.2"
-            checkout main
-            merge version2.0 id: "v2.0"
-        </div>
-    </div>
-    <div style="flex: 1;">>
-        <ul>
-            <li>my enhancement on <a href=#github-flow>GitHub Flow</a></li>
-            <li>stable main branch</li>
-            <li>version branches</li>
-                <ul>
-                    <li>keep history</li>
-                    <li>nightly builds</li>
-                </ul>
-            <li>feature branches for each version</li>
-            <li>no parallel development of features</li>
-        </ul>
-    </div>
+<div class="mermaid">
+gitGraph
+    commit id: "v0.1"
+    branch version1.0
+    checkout version1.0
+        branch featureA
+        checkout featureA
+            commit id: "devA1"
+            commit id: "devA2"
+        checkout version1.0
+        merge featureA id: "v0.2"
+    checkout main
+    merge version1.0 id: "v1.0"
+    branch version2.0
+    checkout version2.0
+        commit id: "v1.1" 
+        branch featureB
+        checkout featureB
+            commit id: "devB1"
+            commit id: "devB2"
+            commit id: "devB3"
+        checkout version2.0
+        merge featureB id: "v1.2"
+    checkout main
+    merge version2.0 id: "v2.0"
 </div>
+
+* my enhancement on [GitHub Flow](#github-flow)
+* stable main branch
+* version branches
+        * keep history
+        * nightly builds
+* feature branches for each version
+* no parallel development of features
 
 
 ---
