@@ -1,0 +1,27 @@
+[project]
+name = "cnc-computing-course"
+version = "0.1.0"
+description = "Content for the CAS Cookies-n-Code Computing Course (CN5)"
+authors = [
+    {name="Lukas Steinwender"},
+    {name="Michael Bradley"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "astropy>=7.1.0",
+    "matplotlib>=3.10.6",
+    "numpy>=2.3.3",
+]
+
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+#custom stuff
+[project.urls]
+Homepage = "https://github.com/swincas/cnc-computing-course"
+Repository = "https://github.com/swincas/cnc-computing-course"
+Issues = "https://github.com/swincas/cnc-computing-course/issues"
