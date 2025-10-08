@@ -1,7 +1,15 @@
 # cnc-computing-course
 Content for the CAS Cookies-n-Code Computing Course (CN5)
 
-## Preliminary Tasks
+## Notes For Presentors
+* to use the custom [cn5_style.css](./styles/cn5_style.css) in the [marpit](https://marpit.marp.app/) slides proceed as follows
+    1. open project in [VSCode](https://code.visualstudio.com/)
+    2. add [Marp for VSCode](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) addon
+    3. open workspace settings
+    4. search for `marp theme`
+    5. under `Markdown › Marp: Themes` add the following path `styles/cn5_style.css`
+
+## Preliminary Tasks For Attendees
 - [ ] create git account
 - [ ] get OzStar account
 - [ ] become member of OzStar project
@@ -49,7 +57,6 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 1. example end2end workflows
 1. Q&A
 1. sshkeys (optional)
-
 
 ## Repo Structure
 * [code/](./code/)

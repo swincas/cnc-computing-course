@@ -1,15 +1,20 @@
 ---
 marp: true
-theme: default
-class: invert
+theme: cn5_style
 ---
 
+<!-- _class: titleslide -->
+# Day 1
 
+![bg](../../gfx/TitlePage.png)
+<div class="footnote">Image generated with ChatGPT</div>
+
+---
 
 # Git
 * version control
 * local
-
+https://github.com/TheRedElement
 ---
 
 # GitHub

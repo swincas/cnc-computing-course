@@ -1,0 +1,164 @@
+/* @theme cn5_style */
+/* cn5_style.css */
+
+@import 'default';
+
+/* ################################################################## */
+/* base style */
+section {
+	background-color: #000000;
+	color: rgb(255, 255, 255);
+}
+
+/* ################################################################## */
+/* Title Slide */
+section.titleslide {
+	text-align: right;
+}
+section.titleslide h1 {
+	font-size: 5em;
+}
+section.titleslide h2 {
+	font-size: 2em;
+}
+
+/* ################################################################## */
+/* headers */
+/* slide title */
+section h1 {
+	color: #ffffff;
+	font-size: 1.5em;
+}
+/* columns title */
+section h2 {
+	color: #ffffff;
+	font-size: 1.3em;
+	font-weight: bold
+}
+
+section h3 {
+	color: #ffffff;
+	font-size: 1.1em;
+	font-weight: bold
+}
+section h4 {
+	color: #ffffff;
+	font-size: 1.0em;
+	font-weight: bold
+}
+
+/* ################################################################## */
+/* footnotes */
+.footnote {
+	color: #974D13;
+	font-size: 0.5em;
+	text-align: left;
+	position: absolute;
+	left: 1em;
+	bottom: 0em;
+}
+
+/* ################################################################## */
+/* crossreferences */
+a:link {
+	color: #CA7D33;
+	background-color: transparent;
+	text-decoration: none;
+	font-style: italic;
+}
+
+a:visited {
+	color: #CA7D33;
+	background-color: transparent;
+	text-decoration: none;
+	font-style: italic;
+}
+
+a:hover {
+	color: #CA7D33;
+	background-color: transparent;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+a:active {
+	color: #CA7D33;
+	background-color: transparent;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+/* ################################################################## */
+/* level colorings for bullet lists */
+section ul > li {
+	font-size: 1em;
+	color: hsl(0, 0%, 100%);
+}
+
+section ul > li > ul > li {
+	font-size: 0.9em;
+	color: hsl(0, 0%, 100%);
+}
+
+section ul > li > ul > li > ul > li {
+	font-size: 0.8em;
+	color: hsl(0, 0%, 100%);
+}
+
+/* ################################################################## */
+/* level colorings for ordered lists */
+/* top level */
+section ol {
+	list-style: none;
+	counter-reset: section;
+}
+section ol > li {
+	counter-increment: section;
+	font-size: 1em;
+	color: hsl(0, 0%, 100%);
+}
+section ol > li:before {
+	content: counter(section) ". ";
+	/* font-size: 1em; */
+	color: rgb(255, 255, 255);
+}
+
+/* second level */
+section ol > li > ol {
+	list-style: none;
+	counter-reset: subsection;
+}
+  
+section ol > li > ol > li {
+	counter-increment: subsection;
+	font-size: 0.9em;
+	color: hsl(0, 0%, 100%);
+}
+section ol > li > ol > li::before {
+	content: counter(section) "." counter(subsection) " ";
+	color: hsl(0, 0%, 100%);
+}
+section ol > li > ol > li {
+	font-size: 0.9em;
+	color: hsl(0, 0%, 100%);
+}
+
+/* third level */
+section ol > li > ol > li > ol {
+	list-style: none;
+	counter-reset: subsubsection;
+}
+  
+section ol > li > ol > li > ol > li {
+	counter-increment: subsubsection;
+	font-size: 0.8em;
+	color: hsl(0, 0%, 100%);
+}
+section ol > li > ol > li > ol > li::before {
+	content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+	color: hsl(0, 0%, 100%);
+}
+section ol > li > ol > li > ol > li {
+	font-size: 0.8em;
+	color: hsl(0, 0%, 100%);
+}
