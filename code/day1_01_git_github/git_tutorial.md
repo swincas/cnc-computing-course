@@ -69,7 +69,7 @@ git log --graph --oneline --decorate --all --color
 ### Merge
 * in principle automatic (requires user action for merge conflicts)
 
-<div class="mermaid">
+```mermaid
 gitGraph
     commit id: "A"
     commit id: "B"
@@ -81,10 +81,10 @@ gitGraph
     commit id: "E"
     merge feature id: "C "
     commit id: "F"
-</div>
+```
 
 ### Rebase
-<div class="mermaid">
+```mermaid
 gitGraph
     commit id: "A"
     commit id: "B"
@@ -97,7 +97,7 @@ gitGraph
     cherry-pick id: "C"
     commit id: "D "
     commit id: "E "
-</div>
+```
 
 
 ---
