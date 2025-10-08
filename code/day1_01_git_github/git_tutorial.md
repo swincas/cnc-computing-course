@@ -116,65 +116,229 @@ gitGraph
 * edits to original can be suggested via pull requests
 
 ---
-
 # Industry Workflows
+---
+<style scoped>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
 
-## Release-Dev-Feature
-<div class="mermaid">
-gitGraph
-    commit id: "v0.1"
-    branch dev
-    checkout dev
-        branch featureA
-        checkout featureA
-            commit id: "devA1"
-            commit id: "devA2"
-        checkout dev
-        merge featureA id: "v0.2"
-    checkout main
-    merge dev id: "v1.0"
-    checkout dev
-    commit id: "v1.1"
-        branch featureB
-        checkout featureB
-        commit id: "devB1"
-        commit id: "devB2"
-        commit id: "devB3"
-    checkout dev
-    merge featureB id: "v1.2"
-    checkout main
-    merge dev id: "v2.0"
-    %% rebase featureB
+## GitHub Flow
+
+<div class="container">
+    <div class="col">
+        <div class="mermaid">
+        gitGraph
+            commit id: "initial commit"
+            branch feature1
+            checkout feature1
+                commit id: "change1"
+            checkout main
+            merge feature1 id: "v1.0"
+            branch feature2
+            checkout feature2
+                commit id: "change2.1"
+            checkout main
+            branch feature3
+            checkout feature3
+                commit id: "change3"
+            checkout feature2
+            commit id: "change2.2"
+            checkout main
+            merge feature2 id: "v2.0"
+            merge feature3 id: "v3.0"
+        </div>
+    </div>
+    <div class="col">
+        <ul>
+            <li>lightweight</li>
+            <li>small projects</li>
+            <li>straightforward</li>
+            <li>continuous integration</li>
+            <li>fast feedback</li>
+        </ul>
+    </div>
 </div>
 
 ---
+<style scoped>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
 
-## Release-Version-Feature
-<div class="mermaid">
-gitGraph
-    commit id: "v0.1"
-    branch version1.0
-    checkout version1.0
-        branch featureA
-        checkout featureA
-            commit id: "devA1"
-            commit id: "devA2"
-        checkout version1.0
-        merge featureA id: "v0.2"
-    checkout main
-    merge version1.0 id: "v1.0"
-    branch version2.0
-    checkout version2.0
-        commit id: "v1.1" 
-        branch featureB
-        checkout featureB
-            commit id: "devB1"
-            commit id: "devB2"
-            commit id: "devB3"
-        checkout version2.0
-        merge featureB id: "v1.2"
-    checkout main
-    merge version2.0 id: "v2.0"
+## Git Flow
+<div class="container">
+    <div class="col">
+        <div class="mermaid">
+            gitGraph
+                commit id: "v0.1"
+                %%setup long-lived branches
+                branch hotfix order: 2
+                branch dev order: 3
+                %%add commit history
+                checkout dev
+                    commit id: "new feature1"
+                checkout hotfix
+                    commit id: "fix1"
+                checkout main
+                    merge hotfix id: "v0.2"
+                checkout dev
+                    branch feature1 order: 5
+                checkout feature1
+                    commit id: "feature1.1"
+                checkout dev
+                    commit id: "new feature2"
+                    branch feature2 order: 4
+                checkout feature2
+                    commit id: "feature2.1"
+                checkout dev
+                    merge hotfix
+                checkout feature2
+                    commit id: "feature2.2"
+                checkout feature1
+                    commit id: "feature1.2"
+                checkout dev
+                    merge feature2
+                branch release order: 2
+                checkout release
+                    commit id: "release testing"
+                    commit id: "release bug fixes"
+                checkout main
+                    merge release id: "v1.0"
+                checkout dev
+                    merge release
+                checkout feature1
+                    commit id: "feature1.3"
+        </div>
+    </div>
+    <div class="col">
+        <ul>
+            <li>more complex</li>
+            <li>allows parallel development</li>
+            <li>main branch remains stable</li>
+        </ul>
+    </div>
+</div>    
+</div>
+
+
+---
+<style scoped>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+## Dev-Feature (Simplification of [Git Flow](#git-flow))
+<div class="container">
+    <div class="col">
+        <div class="mermaid">
+        gitGraph
+            commit id: "v0.1"
+            branch hotfix
+            branch dev
+            checkout hotfix
+                commit id: "hf1"
+                commit id: "hf2"
+            checkout main
+            merge hotfix id: "v0.2"
+            checkout dev
+                branch featureA
+                checkout featureA
+                    commit id: "devA1"
+                    commit id: "devA2"
+                checkout dev
+                merge featureA id: "dev1.0"
+            checkout main
+            merge dev id: "v1.0"
+            checkout main
+            checkout dev
+            commit id: "dev2.0"
+                branch featureB
+                checkout featureB
+                commit id: "devB1"
+                commit id: "devB2"
+                commit id: "devB3"
+            checkout dev
+            merge featureB id: "dev2.01"
+            checkout main
+            merge dev id: "v2.0"
+        </div>
+    </div>
+    <div class="col">
+        <ul>
+            <li>my simplification of <a href=#git-flow>Git Flow</a></li>
+            <li>stable main branch</li>
+            <li>no parallel development of features</li>
+            <li>dev for nightly builds</li>
+        </ul>
+    </div>
+</div>
+
+---
+<style scoped>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+## Version-Feature
+<div class="container">
+    <div class="col">
+        <div class="mermaid">
+        gitGraph
+            commit id: "v0.1"
+            branch version1.0
+            checkout version1.0
+                branch featureA
+                checkout featureA
+                    commit id: "devA1"
+                    commit id: "devA2"
+                checkout version1.0
+                merge featureA id: "v0.2"
+            checkout main
+            merge version1.0 id: "v1.0"
+            branch version2.0
+            checkout version2.0
+                commit id: "v1.1" 
+                branch featureB
+                checkout featureB
+                    commit id: "devB1"
+                    commit id: "devB2"
+                    commit id: "devB3"
+                checkout version2.0
+                merge featureB id: "v1.2"
+            checkout main
+            merge version2.0 id: "v2.0"
+        </div>
+    </div>
+    <div class="col">
+        <ul>
+            <li>my enhancement on <a href=#github-flow>GitHub Flow</a></li>
+            <li>stable main branch</li>
+            <li>version branches</li>
+                <ul>
+                    <li>keep history</li>
+                    <li>nightly builds</li>
+                </ul>
+            <li>feature branches for each version</li>
+            <li>no parallel development of features</li>
+        </ul>
+    </div>
 </div>
 
 
