@@ -111,3 +111,110 @@ pip3 install -e <path/to/your/package>
     * compile to `C`
     * consistent data types
     * views > copies
+* enhancements: `np.einsum()`, [Einops](https://einops.rocks/)
+
+---
+
+![bg 100% vertical right:50%](../../gfx/loto_matplotlib.png)
+![bg 100% vertical right:50%]("")
+
+# [Matplotlib](https://matplotlib.org/)
+* [Python's](https://www.python.org/) plotting library
+* highly customizable
+
+render-hieararchy:
+1. Canvas
+1. Containers: Figure, Axes
+1. Artist: lines, markers, text, ...
+
+---
+## Design Guidelines
+* understandable without extra explanation
+    * caption should guide the user, not substitute the plot
+* readable
+    * font-size
+    * clutter
+* understandable without colours
+* should present key result
+
+> most paper readers look at the plots before reading the text.
+> the plot shall sell your result/idea
+
+---
+## Customizing [Matplotlib](https://matplotlib.org/)
+### Approach 1: [style sheets](https://matplotlib.org/stable/users/explain/customizing.html#customizing-with-style-sheets)
+* default [matplotlibrc file](https://matplotlib.org/stable/users/explain/customizing.html#matplotlibrc-sample)
+* use via the following
+
+```python
+plt.style.use("<path/to/yout/file.mplstyle")
+```
+
+### Approach 2: Function + `plt.rcParams`
+* see [this repo](https://github.com/TheRedElement/LuStCodeSnippets/blob/main/LuStCodeSnippets_py/Styles/PlotStyles.py) for examples
+* see [here](https://github.com/TheRedElement/LuStCodeSnippets/blob/main/LuStCodeSnippets_py_demos/Styles_demos/PlotStyles_demo.ipynb) for usage demos
+
+---
+# Data Frames
+![bg 50% vertical right:30%]("")
+![bg 50% vertical right:30%](../../gfx/logo_pandas.svg)
+![bg 50% vertical right:30%]("")
+![bg 50% vertical right:30%](../../gfx/logo_polars.png)
+![bg 50% vertical right:30%]("")
+
+## [pandas](https://pandas.pydata.org/)
+* processing tabular data efficiently
+* loads of convenience methods and functions
+* has some convenient plotting capabilities
+
+## [Polars](https://pola.rs/)
+* [Pandas](#pandas) on steroid
+* not as many conveniences, but but efficient in
+    * memory
+    * speed
+
+---
+# [Astropy]()
+
+---
+
+# Other Useful Packages
+* [Scipy]()
+
+---
+# Good Practises: [Logging](https://docs.python.org/3/library/logging.html)
+* `print()` can go haywire especially on supercomputer
+* [Logging](https://docs.python.org/3/library/logging.html) allows customization of displayed messages
+
+```python
+import logging
+logger = logging.get_logger()                   #root logger
+local_logger = logging.get_logger(__name__)     #root logger
+logger.setLevel(logging.warning)   #only show warnings
+local_logger.setLevel(logging.debug)   #only all logged messages
+
+logger.info("hidden")
+logger.warn("shown")
+local_logger.info("not hidden")
+local_logger.warn("shown")
+```
+
+---
+# Good Practises: Unit Tests
+* unit tests ensure that your code does not break
+* crucial for collaboration
+
+> investing 30 min to write a good test prevents hours of headache down the line
+
+* useful module: [pytest](https://docs.pytest.org/)
+
+```python
+#content of test_sample.py
+def inc(x):
+    return x + 1
+def test_answer():
+    assert inc(3) == 5
+```
+```bash
+pytest <path/to/test/directory>
+```
