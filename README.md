@@ -55,6 +55,7 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
     1. debugger
     1. extension
 1. example end2end workflows
+    1. Obsidian
 1. Q&A
 1. sshkeys (optional)
 

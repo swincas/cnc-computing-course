@@ -94,5 +94,20 @@ pip3 install -e <path/to/your/package>
 
 ---
 # Useful Packages
-
 ---
+
+# [NumPy](https://numpy.org/)
+
+![bg 50% vertical right:30%](../../gfx/logo_numpy.png)
+![bg 50% vertical right:30%]("")
+![bg 50% vertical right:30%]("")
+![bg 50% vertical right:30%]("")
+
+* main package for numerical computations
+* philosophy
+    * vectorization > parallelisation
+* row-indexed
+* need for speed
+    * compile to `C`
+    * consistent data types
+    * views > copies
