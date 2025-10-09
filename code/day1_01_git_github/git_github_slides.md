@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: cn5_style
+footer: slides by Lukas Steinwender
 ---
 
 <!-- _class: titleslide -->

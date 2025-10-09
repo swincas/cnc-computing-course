@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: cn5_style
+footer: slides created Lukas Steinwender
 ---
 
 <!-- _class: titleslide -->
@@ -137,7 +138,7 @@ render-hieararchy:
 * understandable without colours
 * should present key result
 
-> most paper readers look at the plots before reading the text.
+> most paper readers look at the plots **before** reading the text.
 > the plot shall sell your result/idea
 
 ---
@@ -174,12 +175,55 @@ plt.style.use("<path/to/yout/file.mplstyle")
     * speed
 
 ---
-# [Astropy]()
+![bg 70% vertical right:30%]("")
+![bg 70% vertical right:30%](../../gfx/logo_astropy.png)
+![bg 70% vertical right:30%]("")
+![bg 70% vertical right:30%]("")
 
+# [Astropy](https://docs.astropy.org/)
+* developed specifically for astronomy
+* useful intergations
+    * astronomical data-formats
+    * units
+    * coordinates
+    * coordinate systems
+
+---
+## Snippets
+* [ND data processing](https://docs.astropy.org/en/latest/nddata/index.html)
+```python
+from astropy.nddata import Cutout2D
+cutout = Cutout2D(<img>, position=<coords_center>, size=<size_pixels>, wcs=<img_wcs>)                           
+fig, axs = plt.subplots(1,1, suplot_kw=dict(projection=cutout.wcs))
+axs.imshow(cutoput.data)
+```
+* [coordinates](https://docs.astropy.org/en/stable/coordinates/index.html)
+```python
+from astropy.coordinates import SkyCoord
+coords1 = SkyCoord(ra=<ra>, dec=<dec>, unit=(<ra_unit>,<dec_unit>), frame="fk5")
+coords2 = SkyCoord(ra=<ra>, dec=<dec>, unit=(<ra_unit>,<dec_unit>), frame="fk5")                
+idx, d2d, d3d = coords2.mathr_co_catalog_3d(coords1)    #crossmatch
+dists = coords1.separation(coords2)                     #separation
+```
+* [FlatLambdaCDM](https://docs.astropy.org/en/stable/api/astropy.cosmology.LambdaCDM.html) cosmology
+```python
+from astropy.cosmology import LambdaCDM                                                     
+cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
+```
 ---
 
 # Other Useful Packages
-* [Scipy]()
+* [Scipy](https://scipy.org/)
+    * variety of tools useful in scientific computing
+    * see stats-course by *Chris Blake*
+* [joblib](https://joblib.readthedocs.io/)
+    * see later session
+* [mpi4py](https://mpi4py.readthedocs.io/)
+    * see later session
+* [seaborn](https://seaborn.pydata.org/)
+    * statistical data visualization
+* [scikit-learn](https://scikit-learn.org/)
+    * (shallow) machine learning in python
 
 ---
 # Good Practises: [Logging](https://docs.python.org/3/library/logging.html)
