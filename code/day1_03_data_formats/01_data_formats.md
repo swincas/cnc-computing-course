@@ -60,7 +60,7 @@ t.write(<path/to/file.fits>, format="fits")
 * lightweight
 
 > industry standard for cloud based data lakes
-```
+```python
 import pandas as pd
 df = pd.read_parquet(<path/to/file.parquet>)
 df.to_parquet(<path/to/file.parquet>)
