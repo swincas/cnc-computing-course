@@ -48,7 +48,7 @@ section h4 {
 }
 
 /* ################################################################## */
-/* footnotes */
+/* other buliding blocks */
 .footnote {
 	color: #974D13;
 	font-size: 0.5em;
@@ -56,6 +56,19 @@ section h4 {
 	position: absolute;
 	left: 2%;
 	bottom: 1%;
+}
+
+/* blockquote {
+	color: #3E2114;
+	margin-left: 2em;
+  	border-left: 0.5em #311A0F solid;
+  	background-color: #CA7D33;
+} */
+blockquote {
+	color: #CA7D33;
+	margin-left: 2em;
+  	border-left: 0.5em #3E2114 solid;
+  	background-color: #311A0F;
 }
 
 /* ################################################################## */
@@ -91,16 +104,22 @@ a:active {
 /* ################################################################## */
 /* level colorings for bullet lists */
 section ul > li {
+	list-style-type: none; /* Remove default bullets */
 	font-size: 1em;
 	color: hsl(0, 0%, 100%);
 }
+section ul > li:before {	/* modify bullet */
+	content: "🍪 ";
+}
 
 section ul > li > ul > li {
+	list-style-type: none; /* Remove default bullets */
 	font-size: 0.9em;
 	color: hsl(0, 0%, 100%);
 }
 
 section ul > li > ul > li > ul > li {
+	list-style-type: none; /* Remove default bullets */
 	font-size: 0.8em;
 	color: hsl(0, 0%, 100%);
 }

@@ -319,3 +319,15 @@ git commit -m "Convert submodule to regular directory"
 > 2. on [GitHub](http://github.com/), init a new repo that can host all your useful code-snippets
 > 3. based on one of the [industry workflows](#industry-workflows), create a `dev` branch that will host your developments detached from `main`
 > 4. modify the `README.md` file and push the changes
+
+---
+# Good To Know
+
+## [GitHub Education](https://github.com/education/students)
+* requires picture of student card
+* benefits
+    * free [GitHub pro](https://docs.github.com/en/get-started/learning-about-github/githubs-plans) account
+    * [GitHub Copilot](https://github.com/features/copilot)
+    * unlimited repos
+    * cloud coding space
+    * loads of courses
