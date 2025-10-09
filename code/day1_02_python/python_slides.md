@@ -5,7 +5,7 @@ theme: cn5_style
 
 <!-- _class: titleslide -->
 # Control 
-## Python and <br> Virtual Environments
+## Python and <br> Virtual Environments <br> Packages
 
 ![bg](../../gfx/TitlePage.png)
 <div class="footnote">Image generated with ChatGPT</div>
@@ -91,3 +91,8 @@ pip3 install -e <path/to/your/package>
     pip3 install pipreqs    #install
     pipreqs . --force       #create (force to overwrite existing file)
 ```
+
+---
+# Useful Packages
+
+---
