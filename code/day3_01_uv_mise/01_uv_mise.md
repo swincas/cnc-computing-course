@@ -25,7 +25,6 @@ footer: slides by Lukas Steinwender
 > [mise](https://mise.jdx.dev/) does most of the things you should do for you
 
 <br>
-<br>
 
 $$\textcolor{red}{\text{\large unfortunately NOT useable on OzStar (quota limit)}}$$
 
@@ -69,10 +68,12 @@ mise set MY_VAR=123
 ```
 
 ---
-![bg vertical 50% right:25%]("")    <!-- placeholder for placment -->
-![bg vertical 50% right:25%](../../gfx/logo_uv.png)
-![bg vertical 50% right:25%]("")    <!-- placeholder for placment -->
-![bg vertical 50% right:25%]("")    <!-- placeholder for placment -->
+![bg vertical 50% right:20%]("")    <!-- placeholder for placment -->
+![bg vertical 50% right:20%](../../gfx/logo_uv.png)
+![bg vertical 50% right:20%]("")    <!-- placeholder for placment -->
+![bg vertical 50% right:20%]("")    <!-- placeholder for placment -->
+![bg vertical 50% right:20%]("")    <!-- placeholder for placment -->
+![bg vertical 50% right:20%]("")    <!-- placeholder for placment -->
 
 # [uv](https://docs.astral.sh/uv/)
 
@@ -86,5 +87,53 @@ mise set MY_VAR=123
 
 > [uv](https://docs.astral.sh/uv/) does most of the things you should do for you
 
+<br>
+
+$$\textcolor{red}{\text{\large unfortunately NOT useable on OzStar (quota limit)}}$$
+$$\textcolor{green}{\text{\large but there's a workaround ;)}}$$
+
 ---
 ## Workflow
+* init project
+```bash
+uv init <project-name>
+uv init <project-name> --bare    #minimal project
+```
+* add packages
+```bash
+uv add <package-name>[>=version] [--dev] [--group] [--optional]
+uv add git+<https-link>
+```
+* remove packages
+```bash
+uv remove <packa-name>
+```
+---
+## Integration with [venv](../day1_02_python/01_python_slides.md)
+```bash
+uv pip compile pyproject.toml -o requirements.txt 
+python3 -m venv .venv
+source .venv
+pip3 install -r requirements.txt
+```
+
+## Comandline Tools
+```bash
+uv init --package <package-name>
+uv run <command>
+```
+
+---
+# End2End Workflow
+```bash
+#create project
+mkdir testproject
+cd testproject
+#add relevant software
+mise use python@3.11
+mise use uv@latest
+#init project
+uv init --package .
+#run from commandline
+uv run testproject
+```
