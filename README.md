@@ -1,6 +1,7 @@
 # cnc-computing-course
 Content for the CAS Cookies-n-Code Computing Course (CN5)
 
+
 ## Notes For Presentors
 * to use the custom [cn5_style.css](./styles/cn5_style.css) in the [marpit](https://marpit.marp.app/) slides proceed as follows
     1. open project in [VSCode](https://code.visualstudio.com/)
@@ -8,11 +9,23 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
     3. open workspace settings
     4. search for `marp theme`
     5. under `Markdown › Marp: Themes` add the following path `styles/cn5_style.css`
+* when presenting it is useful to enable `screencast mode`
+    * enable via `ctrl+shift+P > Developer: Toggle Screencast Mode`
+    * ensures people can see your keystrokes
 
 ## Preliminary Tasks For Attendees
 - [ ] create git account
 - [ ] get OzStar account
 - [ ] become member of OzStar project
+- [ ] install [git](https://git-scm.com/)
+    - Linuc (Ubuntu): `apt-get install git`
+    - Mac: `brew install git`
+    - Windows: download from [here](https://git-scm.com/downloads/win)
+- [ ] clone the Cn5 repo
+```bash
+git clone https://github.com/swincas/cnc-computing-course.git -b main CnC
+```
+
 
 ## Agenda
 1. VSCode intro
