@@ -21,6 +21,15 @@ footer: slides by Lukas Steinwender
 * building pdf `ctrl+alt+B`.
 
 ---
+# Debugger
+![bg 100% vertical right:60%](../../gfx/vscode_debugger.png)
+
+* efficient debugging of your code
+* works also on OzStar
+
+> be careful with **active** environments
+
+---
 
 # Other Useful Extensions
 * [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)
