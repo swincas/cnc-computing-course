@@ -60,7 +60,7 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 1. sshkeys (optional)
 
 ## Repo Structure
-* [code/](./code/)
+* [code/](./src)
     * contains examples and tasks for the course
 * [legacy/](./legacy/)
     * contains layouts of previous versions of Cn5
