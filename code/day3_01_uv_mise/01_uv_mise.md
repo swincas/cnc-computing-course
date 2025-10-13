@@ -109,7 +109,7 @@ uv add git+<https-link>
 uv remove <packa-name>
 ```
 ---
-## Integration with [venv](../day1_02_python/01_python_slides.md)
+## Integration with [venv](./../day1_02_python/01_python_slides.md)
 ```bash
 uv pip compile pyproject.toml -o requirements.txt 
 python3 -m venv .venv
