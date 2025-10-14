@@ -117,6 +117,8 @@ pip3 install -e <path/to/your/package>
     * views > copies
 * enhancements: `np.einsum()`, [Einops](https://einops.rocks/)
 
+> make use of `@np.vecrtorize` to increase speed
+
 ---
 
 ![bg 100% vertical right:50%](../../gfx/loto_matplotlib.png)

@@ -1,6 +1,8 @@
 # cnc-computing-course
 Content for the CAS Cookies-n-Code Computing Course (CN5)
 
+## TODO
+- [ ] [02_parallel_computing.py](./code/day2_02_hpc_ozstar/02_parallel_computing.py): MPI example
 
 ## Notes For Presentors
 * to use the custom [cn5_style.css](./styles/cn5_style.css) in the [marpit](https://marpit.marp.app/) slides proceed as follows

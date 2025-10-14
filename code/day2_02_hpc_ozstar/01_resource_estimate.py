@@ -1,30 +1,16 @@
 #Lukas Steinwender
 
 #%%imports
+import logging
 import numpy as np
 from datetime import datetime
 from typing import Callable
+from utils import runtime_estimate
+
+logger = logging.getLogger()
+logging.basicConfig(level=logging.INFO)
 
 #%%definitions
-def runtime_estimate(f:Callable, nreps:int=1, nest:int=10, *args):
-    """
-        - estimate runtime of `f(*args)` over `nreps` executions
-        - project estimate to `nest` executions
-    """
-    
-    #do `nreps` repetitions
-    durations = []
-    for _ in range(nreps):
-        start = datetime.now()  #starting time of current execution
-
-        f(*args)    #run function
-        end = datetime.now()    #completion time of current execution
-        durations.append(end-start)
-    
-    rt_est = np.mean(durations)
-    print(f"mean runtime over {nreps} executions: {rt_est} => estimate for {nest} executions: {rt_est*nreps}")
-    return 
-
 def arr_sum(n:int=10000):
     """
         - computes sum of two large arrays (size `(n,n)`)
@@ -36,12 +22,12 @@ def arr_sum(n:int=10000):
 
     sum = np.sum(big_arr_1) + np.sum(big_arr_2)
 
-    print(f"Sum of large array: {sum}")
+    logger.info(f"Sum of large array: {sum}")
     return
 
 #%%main
 def main():
-    runtime_estimate(arr_sum, 3, 10, 10000)
+    runtime_estimate(arr_sum, 10000, nreps=3, nest=10)
 
 if __name__ == "__main__":
     main()

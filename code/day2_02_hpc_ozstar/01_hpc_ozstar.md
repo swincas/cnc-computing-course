@@ -17,7 +17,7 @@ footer: slides by Lukas Steinwender
 <!-- Tooarrana: endangered Australian animal -->
 <!-- Farnakle: Australian slang for "wasting time or engaging in inconsequential activity that creates a false appearance of productivity" -->
 
-<div class="footnote">Source: OzSTAR docs (https://supercomputing.swin.edu.au/docs, 2025/10)</div>
+<div class="footnote">Source: <a href=https://supercomputing.swin.edu.au/docs>OzSTAR docs</a> (2025/10)</div>
 
 | Unit | OzSTAR (2018) | Ngarrgu Tindebeek (NT, 2023) |
 | :-: | :-: | :-: |
@@ -27,9 +27,9 @@ footer: slides by Lukas Steinwender
 
 ---
 # Nodes
-<div class="footnote">Source: OzSTAR docs (https://supercomputing.swin.edu.au/docs, 2025-10)</div>
+<div class="footnote">Source: <a href=https://supercomputing.swin.edu.au/docs>OzSTAR docs</a> (2025-10)</div>
 
-* access points to the hpc
+* access points to the HPC
 
 | Node | Type | Application |
 | :- | :- | :- |
@@ -79,6 +79,11 @@ module load python/3.11.2-bare  #minimal installation of python
 module load ipython/9.3.0       #for interactive computing
 # module load python-scientific/3.13.1-foss-2025a #scientific python packages                    
 ```
+
+---
+# Let's Set Up a [.bashrc](../day2_01_bash/01_bash.md) on OzSTAR!
+* adding commonly used modules
+* adding aliases
 
 
 ---
@@ -164,3 +169,34 @@ mprof plot -o "mprofile_plot.png"
 
 ---
 ## SLURM Scripts
+* check [this repo](https://github.com/TheRedElement/RepoTemplate_LuSt/blob/main/code/bash/slurm_template.sh) for a more comprehensive template
+
+```bash
+#!/bin/bash
+
+#SBATCH --mail-type=NONE #ALL
+
+#SBATCH --job-name=myjob     #job name
+
+#SBATCH --array=0-2                     #slurm array to execute multiple jobs at once
+#SBATCH --output=./execlogs/%x_%a.out
+#SBATCH --error=./execlogs/%x_%a.err
+
+#SBATCH --ntasks=1                      #number of tasks per node
+#SBATCH --mem=4G                        #total amount of memory per node (in case you are using slurm array)
+#SBATCH --time=2-00:00:00               #time limit
+##SBATCH --gres=gpu:2                    #request GPUs (amount of GPUs after colon)
+#SBATCH --tmp=150GB                     #temporary memory (if large files are acessed, loads of files are read and write)
+
+#load modules
+module load python-scientific/3.13.1-foss-2025a #scientific python packages
+
+#run your stuff
+cp /path/to/file.txt $JOBFS             #copy large files to temporary directory
+
+source ~/<path2env>/bash/bin/activate   #activate environment
+python3 <path2file.py>                  #run your files
+deactivate                              #deactivate environment
+
+cp $JOBFS/path/to/output.txt /path/to/target/directory #don't forget to copy your results back                                      
+```
