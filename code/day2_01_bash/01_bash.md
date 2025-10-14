@@ -35,6 +35,19 @@ footer: slides by Lukas Steinwender
 * allows for detailed customization of your [Bash](#bash-bourne-again-shell) experience
 
 ---
+# PATH
+* system variable containing executables
+* thats where your systems looks for executables
+```bash
+echo $PATH
+```
+
+* adding additional executable
+```bash
+export PATH=<path/to/executable>
+```
+
+---
 # Bash Scripts
 * follow this structure 
 ```bash
@@ -53,7 +66,7 @@ source <some bash script>
 ---
 # Useful Commands
 
-* many cheat-sheets available i.e., [this](https://www.guru99.com/linux-commands-cheat-sheet.html) and [that](https://github.com/0nn0/terminal-mac-cheatsheet?tab=readme-ov-file#english-version)
+* many cheat-sheets available i.e., [my favourite](https://github.com/RehanSaeed/Bash-Cheat-Sheet), [this](https://www.guru99.com/linux-commands-cheat-sheet.html), and [that](https://github.com/0nn0/terminal-mac-cheatsheet?tab=readme-ov-file#english-version)
 
 
 ---
@@ -61,7 +74,8 @@ source <some bash script>
 ```bash
 #control
 sudo <command>      #the command to rule them all (superuser do)
-pkill <name>                            #kill process of name <name> 
+pkill <name>        #kill process of name <name>
+passwd              #changing your password                                                 
 ```
 ```bash
 #navigation

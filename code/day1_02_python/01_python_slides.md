@@ -61,6 +61,9 @@ pip list                                            #listing
 pip freeze > <path/to/requirements.txt>             #sharing
 ```
 
+> choose your own package manager (I recommend pip).
+> Whatever you do, try **NOT** to mix package manager (i.e., conda + pip)
+
 ---
 # Action!
 

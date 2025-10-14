@@ -3,6 +3,8 @@
 #custom stuff#
 ##############
 .vscode
+mprofile*
+temp*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

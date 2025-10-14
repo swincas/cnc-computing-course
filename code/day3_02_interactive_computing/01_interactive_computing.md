@@ -30,7 +30,7 @@ footer: slides by Lukas Steinwender
 * alternative: [IPython](#ipython)
 
 ---
-# [jupyter](https://jupyter.org/) (notebooks) on OzStar
+# [jupyter](https://jupyter.org/) (Notebooks) on OzStar
 
 
 ---

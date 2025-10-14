@@ -40,13 +40,12 @@ git clone https://github.com/swincas/cnc-computing-course.git -b main CnC
     1. pandas (polars)
     1. logging vs print
     1. unit tests
+1. Bash
+    * history
+    * reverse search
+    * symlinks
 1. OzStar + HPC
     1. ssh
-    1. bash commands
-        * https://github.com/RehanSaeed/Bash-Cheat-Sheet
-        * history
-        * reverse search
-    1. symlinks
     1. quota + filesystems, storage
     1. I/O
     1. modules

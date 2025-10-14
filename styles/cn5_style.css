@@ -78,6 +78,20 @@ blockquote {
 }
 
 /* ################################################################## */
+/* tables */
+table :is(th, tr:nth-child(even)) {			/*style all elements in `:is` (th...table header; tr:nth-child(even)...even table rows*/
+	background-color: #000000;
+	border: 1px solid rgb(255, 255, 255);
+  	padding: 0.3em;
+}
+table tbody tr:nth-child(odd) {				/*odd table rows*/
+	background-color: #5f5f5f;
+}
+table tbody tr:hover td {					/*highlight on hover*/
+	background: #CA7D33;
+}
+
+/* ################################################################## */
 /* crossreferences */
 a:link {
 	color: #CA7D33;
