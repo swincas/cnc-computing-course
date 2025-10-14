@@ -117,7 +117,7 @@ pip3 install -e <path/to/your/package>
     * views > copies
 * enhancements: `np.einsum()`, [Einops](https://einops.rocks/)
 
-> make use of `@np.vecrtorize` to increase speed
+> make use of `@np.vecrtorize` to increase speed ([example](../day2_02_hpc_ozstar/02_parallel_computing.py))
 
 ---
 
@@ -174,7 +174,7 @@ plt.style.use("<path/to/yout/file.mplstyle")
 * has some convenient plotting capabilities
 
 ## [Polars](https://pola.rs/)
-* [Pandas](#pandas) on steroid
+* [Pandas](#pandas) on steroids
 * not as many conveniences, but but efficient in
     * memory
     * speed
@@ -222,13 +222,13 @@ cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
     * variety of tools useful in scientific computing
     * see stats-course by *Chris Blake*
 * [joblib](https://joblib.readthedocs.io/)
-    * see later session
+    * see [later session](../day2_02_hpc_ozstar/)
 * [mpi4py](https://mpi4py.readthedocs.io/)
-    * see later session
+    * see [later session](../day2_02_hpc_ozstar/)
 * [seaborn](https://seaborn.pydata.org/)
     * statistical data visualization
 * [scikit-learn](https://scikit-learn.org/)
-    * (shallow) machine learning in python
+    * (shallow) machine learning in [Python](https://www.python.org/)
 
 ---
 # Good Practises: [Logging](https://docs.python.org/3/library/logging.html)
@@ -237,15 +237,15 @@ cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
 
 ```python
 import logging
-logger = logging.get_logger()                   #root logger
-local_logger = logging.get_logger(__name__)     #root logger
-logger.setLevel(logging.warning)   #only show warnings
-local_logger.setLevel(logging.debug)   #only all logged messages
+logger = logging.getLogger()                    #root logger
+local_logger = logging.getLogger(__name__)      #local logger
+logging.basicConfig(level=logging.WARNING)      #only show warnings
+local_logger.setLevel(logging.DEBUG)            #all logged messages
 
 logger.info("hidden")
-logger.warn("shown")
+logger.warning("shown")
 local_logger.info("not hidden")
-local_logger.warn("shown")
+local_logger.warning("shown")
 ```
 
 ---

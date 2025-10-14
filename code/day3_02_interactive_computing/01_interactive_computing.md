@@ -15,7 +15,7 @@ footer: slides by Lukas Steinwender
 
 <!-- in the meantime, colab supports julia as well -->
 
-# [jupyter](https://jupyter.org/) (notebooks)
+# [jupyter](https://jupyter.org/) (Notebooks)
 * interactive computing
     * [julia](https://julialang.org/)
     * [Python](https://python.org/)

@@ -7,6 +7,10 @@ def increment(i):
     return
 
 #%%main
-for i in range(10):
-    increment(i)
-    print(i)
+def main():
+    for i in range(10):
+        increment(i)
+        print(i)
+
+if __name__ == "__main__":
+    main()
