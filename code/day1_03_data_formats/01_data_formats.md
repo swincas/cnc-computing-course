@@ -15,8 +15,8 @@ footer: slides created Lukas Steinwender
 ## [FITS](https://docs.astropy.org/en/latest/io/fits/index.html)
 <!-- FITS: Flexible Image Transfer Format -->
 
-![bg 100% vertical right:30%](../../gfx/fits_sketch.png)
-<div class="footnote">Image credits: Paul G. Beck</div>
+![bg 100% vertical right:30%](../../gfx/fits_sketch.svg)
+<div class="footnote">Image credits: Lukas Steinwender</div>
 
 * file-system designed for astronomy
 * hierarchy
@@ -32,6 +32,8 @@ footer: slides created Lukas Steinwender
 
 ---
 ### Interacting With [FITS](https://docs.astropy.org/en/latest/io/fits/index.html) Files
+
+
 ```python
 #reading
 from astropy.io import fits
