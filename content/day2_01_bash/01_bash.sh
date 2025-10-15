@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+#Lukas Steinwender
 #NOTE: run from project root!
 
 

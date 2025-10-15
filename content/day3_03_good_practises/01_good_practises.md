@@ -83,5 +83,5 @@ python <yoursript.py> [args]
     * see [commandlinetool/](./commandlinetool/) for an example
 ```bash
 #run from project root
-python3 code/day3_03_good_practises/commandlinetool/src/commandlinetool/main.py 1 -o "optarg"
+python3 content/day3_03_good_practises/commandlinetool/src/commandlinetool/main.py 1 -o "optarg"
 ```
