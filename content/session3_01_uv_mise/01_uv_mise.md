@@ -106,7 +106,7 @@ uv add git+<https-link>
 ```
 * remove packages
 ```bash
-uv remove <packa-name>
+uv remove <package-name>
 ```
 ---
 ## Integration with [venv](./../session1_02_python/01_python_slides.md)

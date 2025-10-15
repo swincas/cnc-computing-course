@@ -58,7 +58,7 @@ flowchart LR
 # GPU Computing
 <!-- TPU: Tensor Processing Unit -->
 <!-- PPU: Physics Processing Unit -->
-<div class="footnote">Image Credit: <a href=https://supercomputing.swin.edu.au/docs>Irfan et al., 2023</a></div>
+<div class="footnote">Image Credit: <a href=https://supercomputing.swin.edu.au/docs>Irfan et al. (2023)</a></div>
 
 ![bg fit vertical right:30%](../../gfx/gpu_blockdiagram.png)
 

@@ -35,7 +35,6 @@ footer: slides by Lukas Steinwender
 
 * `camelCase`, `PascalCase`, `snake_case`, `SCREAMING_SNAKE_CASE`
 
-> no need to get fancy, just stick with your system
 > try to follow the community of the language you're using
 
 * examples from [PEP 8](https://peps.python.org/pep-0008/)

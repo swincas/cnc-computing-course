@@ -70,7 +70,7 @@ pip freeze > <path/to/requirements.txt>             #sharing
 > in your copy of [https://github.com/swincas/cnc-computing-course.git](https://github.com/swincas/cnc-computing-course.git)
 > 1. initialize a new [virtual environment](#virtual-environments)
 > 1. activate it
-> 1. install all the packages needed for the remainder of the course using the [requirements.txt](../../reqirements.txt) file
+> 1. install all the packages needed for the remainder of the course using the [requirements.txt](../../requirements.txt) file
 
 <!--
 in code-snippets git repo use UV (later in the course)
@@ -88,7 +88,7 @@ pip3 install -e <path/to/your/package>
 ```
 
 * keep your venv clean with [pipreqs](https://github.com/bndr/pipreqs)
-    * creates [requirements.txt](../../reqirements.txt) that only contains packages that get used in your project
+    * creates [requirements.txt](../../requirements.txt) that only contains packages that get used in your project
         * ignores depdencies of these packages
 
 ```bash
@@ -124,7 +124,7 @@ pip3 install -e <path/to/your/package>
 ![bg 100% vertical right:50%](../../gfx/loto_matplotlib.png)
 ![bg 100% vertical right:50%]("")
 
-# [Matplotlib](https://matplotlib.org/)
+# [matplotlib](https://matplotlib.org/)
 * [Python's](https://www.python.org/) plotting library
 * highly customizable
 
@@ -147,7 +147,7 @@ render-hieararchy:
 > the plot shall sell your result/idea
 
 ---
-## Customizing [Matplotlib](https://matplotlib.org/)
+## Customizing [matplotlib](https://matplotlib.org/)
 ### Approach 1: [style sheets](https://matplotlib.org/stable/users/explain/customizing.html#customizing-with-style-sheets)
 * default [matplotlibrc file](https://matplotlib.org/stable/users/explain/customizing.html#matplotlibrc-sample)
 * use via the following
@@ -174,7 +174,7 @@ plt.style.use("<path/to/yout/file.mplstyle")
 * has some convenient plotting capabilities
 
 ## [Polars](https://pola.rs/)
-* [Pandas](#pandas) on steroids
+* [pandas](#pandas) on steroids
 * not as many conveniences, but but efficient in
     * memory
     * speed
@@ -185,7 +185,7 @@ plt.style.use("<path/to/yout/file.mplstyle")
 ![bg 70% vertical right:30%]("")
 ![bg 70% vertical right:30%]("")
 
-# [Astropy](https://docs.astropy.org/)
+# [astropy](https://docs.astropy.org/)
 * developed specifically for astronomy
 * useful intergations
     * astronomical data-formats
@@ -231,9 +231,9 @@ cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
     * (shallow) machine learning in [Python](https://www.python.org/)
 
 ---
-# Good Practises: [Logging](https://docs.python.org/3/library/logging.html)
+# Good Practises: [logging](https://docs.python.org/3/library/logging.html)
 * `print()` can go haywire especially on supercomputer
-* [Logging](https://docs.python.org/3/library/logging.html) allows customization of displayed messages
+* [logging](https://docs.python.org/3/library/logging.html) allows customization of displayed messages
 
 ```python
 import logging

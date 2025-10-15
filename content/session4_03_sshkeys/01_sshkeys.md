@@ -15,7 +15,7 @@ footer: slides by Lukas Steinwender
 # SSH-Keys?
 * secure way to access remote machines without a password
 * based on encryption
-> NEVER share the private key with anyone!
+> **NEVER** share the private key with anyone!
 
 ```mermaid
 flowchart LR

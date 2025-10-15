@@ -25,6 +25,9 @@ footer: slides by Lukas Steinwender
 | GPU | 230 | 88 |
 | OS | AlmaLinux 9 | AlmaLinux 9 |
 
+> the [OzSTAR docs](https://supercomputing.swin.edu.au/docs/) are pretty comprehensive and good
+> you might even find some things that are useful outside of HPC
+
 ---
 # Nodes
 <div class="footnote">Source: <a href=https://supercomputing.swin.edu.au/docs>OzSTAR docs</a> (2025-10)</div>
@@ -137,6 +140,8 @@ scancel [<job_id>] [-u <username>] [-t PD]                      #kill a running 
 sinteractive --time=0:20:00 --mem=16g --cpus-per-task=8 --x11   #launch interactive session
 jobreport <job_id>                                              #current resource usage of job
 ```
+
+### Let's Play on OzSTAR!
 
 ---
 ## Resource Requests
