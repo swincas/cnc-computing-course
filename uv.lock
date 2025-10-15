@@ -148,15 +148,7 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
-cn5course = [
-    { name = "astropy" },
-]
-mpi = [
-    { name = "mpi4py" },
-]
-
-[package.dev-dependencies]
-dev = [
+course = [
     { name = "astropy" },
     { name = "h5py" },
     { name = "ipykernel" },
@@ -167,27 +159,33 @@ dev = [
     { name = "pandas" },
     { name = "pyarrow" },
 ]
+mpi = [
+    { name = "mpi4py" },
+]
+
+[package.dev-dependencies]
+course = [
+    { name = "astropy" },
+]
 
 [package.metadata]
 requires-dist = [
-    { name = "astropy", marker = "extra == 'cn5course'", specifier = ">=7.1.0" },
+    { name = "astropy", marker = "extra == 'course'", specifier = ">=7.1.0" },
+    { name = "h5py", marker = "extra == 'course'", specifier = ">=3.15.0" },
+    { name = "ipykernel", marker = "extra == 'course'", specifier = ">=7.0.0" },
+    { name = "joblib", marker = "extra == 'course'", specifier = ">=1.5.2" },
+    { name = "matplotlib", marker = "extra == 'course'", specifier = ">=3.10.6" },
+    { name = "memory-profiler", marker = "extra == 'course'", specifier = ">=0.61.0" },
+    { name = "mpi4py", marker = "extra == 'course'", specifier = ">=4.1.1" },
     { name = "mpi4py", marker = "extra == 'mpi'", specifier = ">=4.1.1" },
     { name = "numpy", specifier = ">=2.3.3" },
+    { name = "pandas", marker = "extra == 'course'", specifier = ">=2.3.3" },
+    { name = "pyarrow", marker = "extra == 'course'", specifier = ">=21.0.0" },
 ]
-provides-extras = ["mpi", "cn5course"]
+provides-extras = ["mpi", "course"]
 
 [package.metadata.requires-dev]
-dev = [
-    { name = "astropy", specifier = ">=7.1.0" },
-    { name = "h5py", specifier = ">=3.15.0" },
-    { name = "ipykernel", specifier = ">=7.0.0" },
-    { name = "joblib", specifier = ">=1.5.2" },
-    { name = "matplotlib", specifier = ">=3.10.6" },
-    { name = "memory-profiler", specifier = ">=0.61.0" },
-    { name = "mpi4py", specifier = ">=4.1.1" },
-    { name = "pandas", specifier = ">=2.3.3" },
-    { name = "pyarrow", specifier = ">=21.0.0" },
-]
+course = [{ name = "astropy", specifier = ">=7.1.0" }]
 
 [[package]]
 name = "colorama"
