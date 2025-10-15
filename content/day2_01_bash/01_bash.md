@@ -44,7 +44,7 @@ echo $PATH
 
 * adding additional executable
 ```bash
-export PATH=<path/to/executable>
+export PATH=$PATH:<path/to/executable>
 ```
 
 ---
