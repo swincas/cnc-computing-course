@@ -32,3 +32,7 @@ classifiers = [
 Homepage = "https://github.com/swincas/cnc-computing-course"
 Repository = "https://github.com/swincas/cnc-computing-course"
 Issues = "https://github.com/swincas/cnc-computing-course/issues"
+
+[tool.uv.build-backend]
+module-root = "."           #Adjusts where UV looks for code modules
+module-name = "cn5_pkg"     #Adjusts where UV looks for code modules
