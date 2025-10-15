@@ -158,7 +158,7 @@ def main():
         run_mpi(MPI, io_bound, x, "io")
         run_mpi(MPI, cpu_bound, x, "cpu")
 
-    except ModuleNotFoundError as e:    #otherwise just standard python
+    except RuntimeError as e:    #otherwise just standard python
         logger.info("ignoring mpi as `mpi4py` is not installed")
         logger.info("I/O Bound")
         seq = runtime_estimate(run_sequential, io_bound,    x, nreps=1, nest=1, prefix="sequential: ")

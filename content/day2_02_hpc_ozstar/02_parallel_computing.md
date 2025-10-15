@@ -21,6 +21,7 @@ footer: slides by Lukas Steinwender
 <!-- thread: each core can have several threads (each chrome tab is a thread) -->
 # Threading
 * easy to set up
+    * no extra installs required
 * good for [embarassingly parallel problems](#embarassingly-parallel-problems)
 * shared memory
 * can only use a single machine

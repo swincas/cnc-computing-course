@@ -2,8 +2,17 @@
 Content for the CAS Cookies-n-Code Computing Course (CN5)
 * yes, the slides are pretty full... this is because this repo shall (alongside course material) mainly serve as a resource to find useful information
 
+## Notes
+* [cn5_pkg](./cn5_pkg/)
+    * contains function used for different sessions in the course
+    * might be useful for your own research as well
+    * to use proceed as follows
+        1. download [cn5.py](./cn5_pkg/cn5.py)
+        2. deposit the file in the root of your own project
+        3. import via `import cn5`
+    
+
 ## TODO
-- [ ] [02_parallel_computing.py](./code/day2_02_hpc_ozstar/02_parallel_computing.py): MPI example
 
 ## Notes For Presentors
 * to use the custom [cn5_style.css](./styles/cn5_style.css) in the [marpit](https://marpit.marp.app/) slides proceed as follows

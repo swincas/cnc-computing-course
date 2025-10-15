@@ -117,7 +117,7 @@ def makefits(datadir:str):
     hdu3.header["DESCRIPT"] = "parameters of the lc"
 
     #compressed image hdu (extension)
-    hdu4 = fits.CompImageHDU(data=im3, name='COMPRESSED')
+    hdu4 = fits.CompImageHDU(data=im3, name="COMPRESSED")
     hdu4.header["DESCRIPT"] = "compressed rgb image with random colors"
 
     #combine and save
@@ -306,7 +306,6 @@ def main():
     loadparquet(f"{ROOT_PATH}data/")
     makehdf5(f"{ROOT_PATH}data/")
     loadhdf5(f"{ROOT_PATH}data/")
-    return
 
 if __name__ == "__main__":
     main()
