@@ -42,8 +42,10 @@ footer: slides by Lukas Steinwender
     * classes: `PascalCase`
     * methods: `snake_case`
     * functions: `snake_case`
-    * variabels: `snake_case`
+    * variables: `snake_case`
     * constants: `SCREAMING_SNAKE_CASE`
+* tabular data
+    * find your own style (I use `<quantity>_<context>_<source>[_e] [<[unit]>]`)
 
 ---
 # Refractoring
@@ -54,6 +56,10 @@ footer: slides by Lukas Steinwender
 * catalog sets of function with similar context into importable modules
     * checkout [this repo](https://github.com/TheRedElement/LuStCodeSnippets/blob/dev/lust_codesnippets_py/astronomy/absmag.py) for an example
     * [logging](./../session1_02_python/01_python_slides.md) for insight and debugging
+
+# Testing
+* remember [session1_02_python](../session1_02_python/)?
+    * [cn5_test.py](../../test/cn5_test.py) was the example we had
 ---
 # 3-Step Process
 1. make it **work**

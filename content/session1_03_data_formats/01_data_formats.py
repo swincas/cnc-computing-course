@@ -7,12 +7,10 @@ import h5py
 from IPython.display import display
 import logging
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 import numpy as np
 import os
 import pandas as pd
 import sys
-from typing import List, Tuple, Union
 
 DIR_PATH:str = os.path.dirname(os.path.realpath(__file__)) + "/"    #path to current directory
 ROOT_PATH:str = f"{DIR_PATH}../../"                                 #path to project root
@@ -25,55 +23,6 @@ logging.basicConfig(level=logging.INFO)
 
 
 #%%definitions
-def gen_data(n:int, sigma_nu:float=0.01) -> Tuple[List[np.ndarray],List[float],List[np.ndarray]]:
-    """
-        - helper function to generate data
-        - will generate `n` observations for the lc with gaussian noise of level of `sigma_nu`
-            - errors are assigned as `2*np.abs(flux_e)`
-    """
-    im1 = np.random.randn(10,10)
-    im2 = np.arange(50).reshape(5,10)
-    im3 = np.random.randint(0, 255, (50, 50, 3), dtype=np.uint8)   #rgb image with random colors    
-    images = [im1,im2,im3]
-
-    #get lc
-    ##parameters
-    unique_bands = list("ugrizy")
-    mu1, sigma1 = 40, 20
-    mu2, sigma2 = 20, 10 
-    lc_params = [mu1, mu2, sigma1, sigma2, unique_bands]
-    
-    ##measurements
-    measid  = np.arange(0,n,1)
-    time    = np.linspace(0,1.5*max(mu1, mu2),n) + 0.05*np.random.randn(n)
-    flux    = np.exp(-(time - mu1)**2/sigma1**2) + np.exp(-(time - mu2)**2/sigma2**2)
-    flux_e  = sigma_nu*np.random.randn(n)         #errorbars and noise
-    band    = np.random.choice(unique_bands, size=n)
-    lc = [measid,time,flux+flux_e,2*np.abs(flux_e),band]
-    
-    return images, lc_params, lc
-
-def plot_lc(ax:plt.Axes,
-    time, flux, flux_e, bands,
-    unique_bands, cmap:str="rainbow",
-    label="",
-    ) -> plt.cm.ScalarMappable:
-    """
-        - helper function to plot a lightcurve in various passbands with errorbars
-    """
-    
-    #get colors
-    norm = mcolors.Normalize(vmin=0, vmax=len(unique_bands))
-    cmap = plt.get_cmap(cmap)
-    sm = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-    colors = plt.get_cmap(cmap)(norm(range(len(unique_bands))))
-
-    for (idx, ub) in enumerate(unique_bands):
-        mask = (bands == ub)
-        ax.errorbar(time[mask],  flux[mask],  yerr=flux_e[mask],  marker=".", ls="", c=colors[idx], label=label*(idx==0))
-
-    return sm
-
 def makefits(datadir:str):
     """
         - function to create two fits files
@@ -82,7 +31,7 @@ def makefits(datadir:str):
     """
 
     #get data
-    images, lc_params, lc = gen_data(100, 0.01)
+    images, lc_params, lc = cn5.gen_data(100, 0.01)
     im1, im2, im3 = images
     mu1, mu2, sigma1, sigma2, unique_bands = lc_params
     measid, time, flux, flux_e, band = lc 
@@ -127,7 +76,7 @@ def makefits(datadir:str):
     ############
     #from table#
     ############
-    images, lc_params, lc = gen_data(30, 0.05)
+    images, lc_params, lc = cn5.gen_data(30, 0.05)
 
     tab = Table(data=lc, names=["id","time","flux","flux_e","band"])
     tab.write(datadir+"fitsdemo_table.fits", format="fits", overwrite=True)
@@ -168,8 +117,8 @@ def loadfits(datadir:str):
     #plotting lc
     fig, axs = plt.subplots(1,2, sharex=True, sharey=True, subplot_kw=dict(xlabel="Time", ylabel="Flux"))
     fig.suptitle(", ".join([f"{k}={v}" for (k,v) in zip(lc_params["parameter"],lc_params["value"])]))
-    sm = plot_lc(axs[0], lc["time"],  lc["flux"],  lc["flux_e"],  lc["band"],  unq_bands, "rainbow", label="FITS")
-    sm = plot_lc(axs[1], tab["time"], tab["flux"], tab["flux_e"], tab["band"], unq_bands, "rainbow", label="FITS")
+    sm = cn5.plot_lc(axs[0], lc["time"],  lc["flux"],  lc["flux_e"],  lc["band"],  unq_bands, "rainbow", label="FITS")
+    sm = cn5.plot_lc(axs[1], tab["time"], tab["flux"], tab["flux_e"], tab["band"], unq_bands, "rainbow", label="FITS")
 
     cax = fig.add_axes([1.0, 0.12, 0.03, 0.78])
     cbar = fig.colorbar(sm, cax=cax)
@@ -186,7 +135,7 @@ def makeparquet(datadir:str):
         - function to create a parquet file
     """
     #get data
-    _, _, lc = gen_data(100, 0.01)
+    _, _, lc = cn5.gen_data(100, 0.01)
 
     df = pd.DataFrame(data=dict(
         id=lc[0],
@@ -211,7 +160,7 @@ def loadparquet(datadir:str):
     #plotting lc
     unq_bands = list("ugrizy")
     fig, axs = plt.subplots(1,1, subplot_kw=dict(xlabel="Time", ylabel="Flux"))
-    sm = plot_lc(axs, df["time"],  df["flux"],  df["flux_e"],  df["band"],  unq_bands, "rainbow", label="DataFrame")
+    sm = cn5.plot_lc(axs, df["time"],  df["flux"],  df["flux_e"],  df["band"],  unq_bands, "rainbow", label="DataFrame")
 
     cax = fig.add_axes([1.0, 0.12, 0.03, 0.78])
     cbar = fig.colorbar(sm, cax=cax)
@@ -228,7 +177,7 @@ def makehdf5(datadir:str):
     """
     
     #get data
-    images, lc_params, lc = gen_data(100, 0.01)
+    images, lc_params, lc = cn5.gen_data(100, 0.01)
     im1, im2, im3 = images
     mu1, mu2, sigma1, sigma2, unique_bands = lc_params
     measid, time, flux, flux_e, band = lc 
@@ -288,7 +237,7 @@ def loadhdf5(datadir:str):
     #plotting lc
     fig, axs = plt.subplots(1,1, sharex=True, sharey=True, subplot_kw=dict(xlabel="Time", ylabel="Flux"))
     fig.suptitle(", ".join([f"{k}={v}" for (k,v) in lc_params]))
-    sm = plot_lc(axs, time,  flux,  flux_e,  band,  unq_bands, "rainbow", label="HDF5")
+    sm = cn5.plot_lc(axs, time,  flux,  flux_e,  band,  unq_bands, "rainbow", label="HDF5")
 
     cax = fig.add_axes([1.0, 0.12, 0.03, 0.78])
     cbar = fig.colorbar(sm, cax=cax)

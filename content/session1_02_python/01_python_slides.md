@@ -256,14 +256,12 @@ local_logger.warning("shown")
 > investing 30 min to write a good test prevents hours of headache down the line
 
 * useful module: [pytest](https://docs.pytest.org/)
-
-```python
-#content of test_sample.py
-def inc(x):
-    return x + 1
-def test_answer():
-    assert inc(3) == 5
+* see [cn5_test.py](../../test/cn5_test.py) for an example
+```bash
+#running a test
+pytest <path/to/test/directory>
 ```
 ```bash
-pytest <path/to/test/directory>
+#testing cn5 package (run from project root)
+pytest ./test
 ```
