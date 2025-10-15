@@ -117,7 +117,7 @@ pip3 install -e <path/to/your/package>
     * views > copies
 * enhancements: `np.einsum()`, [Einops](https://einops.rocks/)
 
-> make use of `@np.vecrtorize` to increase speed ([example](../day2_02_hpc_ozstar/02_parallel_computing.py))
+> make use of `@np.vecrtorize` to increase speed ([example](../session2_02_hpc_ozstar/02_parallel_computing.py))
 
 ---
 
@@ -222,9 +222,9 @@ cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
     * variety of tools useful in scientific computing
     * see stats-course by *Chris Blake*
 * [joblib](https://joblib.readthedocs.io/)
-    * see [later session](../day2_02_hpc_ozstar/)
+    * see [later session](../session2_02_hpc_ozstar/)
 * [mpi4py](https://mpi4py.readthedocs.io/)
-    * see [later session](../day2_02_hpc_ozstar/)
+    * see [later session](../session2_02_hpc_ozstar/)
 * [seaborn](https://seaborn.pydata.org/)
     * statistical data visualization
 * [scikit-learn](https://scikit-learn.org/)

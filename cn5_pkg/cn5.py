@@ -1,5 +1,6 @@
 """
-    - utilities used in scripts in day2_02_hpc_ozstar/
+    - utilities used in the course
+    - might be useful for participants' research as well
     - author: Lukas Steinwender
 """
 #%%imports

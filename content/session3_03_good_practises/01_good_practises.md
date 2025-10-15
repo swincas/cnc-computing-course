@@ -54,7 +54,7 @@ footer: slides by Lukas Steinwender
     * checkout [this repo](https://github.com/TheRedElement/RepoTemplate_LuSt/blob/main/code/_projectbuildingblocks.py) for a template
 * catalog sets of function with similar context into importable modules
     * checkout [this repo](https://github.com/TheRedElement/LuStCodeSnippets/blob/dev/lust_codesnippets_py/astronomy/absmag.py) for an example
-    * [logging](./../day1_02_python/01_python_slides.md) for insight and debugging
+    * [logging](./../session1_02_python/01_python_slides.md) for insight and debugging
 ---
 # 3-Step Process
 1. make it **work**
@@ -72,7 +72,7 @@ footer: slides by Lukas Steinwender
 # Conquer the Commandline
 
 * powerful for code that is executed often
-* [uv](./../day3_01_uv_mise/01_uv_mise.md) allows easy creation of commandline tools
+* [uv](./../session3_01_uv_mise/01_uv_mise.md) allows easy creation of commandline tools
 > use a separate uv project for each commandline tool
 
 * can also be done using python
@@ -83,5 +83,5 @@ python <yoursript.py> [args]
     * see [commandlinetool/](./commandlinetool/) for an example
 ```bash
 #run from project root
-python3 content/day3_03_good_practises/commandlinetool/src/commandlinetool/main.py 1 -o "optarg"
+python3 content/session3_03_good_practises/commandlinetool/src/commandlinetool/main.py 1 -o "optarg"
 ```

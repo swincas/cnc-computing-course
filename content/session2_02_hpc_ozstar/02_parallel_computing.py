@@ -1,5 +1,5 @@
 #Lukas Steinwender
-#NOTE: to run with mpi call `mpiexec -n 4 python3 content/day2_02_hpc_ozstar/02_parallel_computing.py` from project root (mpi4py needs to be installed)
+#NOTE: to run with mpi call `mpiexec -n 4 python3 content/session2_02_hpc_ozstar/02_parallel_computing.py` from project root (mpi4py needs to be installed)
 
 #%%imports
 import datetime

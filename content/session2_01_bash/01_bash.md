@@ -60,8 +60,8 @@ export PATH=$PATH:<path/to/executable>
 ```
 source <some bash script>
 ```
-* similar to `import` in [Python](../day1_02_python/01_python_slides.md)
-* remember [venv](../day1_02_python/01_python_slides.md): `source <path/to/venv>/bin/activate`
+* similar to `import` in [Python](../session1_02_python/01_python_slides.md)
+* remember [venv](../session1_02_python/01_python_slides.md): `source <path/to/venv>/bin/activate`
 
 ---
 # Useful Commands

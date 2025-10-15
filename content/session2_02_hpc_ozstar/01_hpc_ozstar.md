@@ -81,7 +81,7 @@ module load ipython/9.3.0       #for interactive computing
 ```
 
 ---
-# Let's Set Up a [.bashrc](../day2_01_bash/01_bash.md) on OzSTAR!
+# Let's Set Up a [.bashrc](../session2_01_bash/01_bash.md) on OzSTAR!
 * adding commonly used modules
 * adding aliases
 
@@ -160,10 +160,10 @@ jobreport <job_id>                                              #current resourc
 * from project root run the following:
 ```bash
 source .venv/bin/activate   #activate environment
-mprof run code/day2_02_hpc_ozstar/01_resource_estimate.py
+mprof run code/session2_02_hpc_ozstar/01_resource_estimate.py
 mprof plot -o "mprofile_plot.png"
 ```
-* [01_resource_estimate.py](code/day2_02_hpc_ozstar/01_resource_estimate.py) contains
+* [01_resource_estimate.py](code/session2_02_hpc_ozstar/01_resource_estimate.py) contains
     * function to estimate resources
     * main function to be executed
 

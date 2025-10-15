@@ -26,7 +26,7 @@ footer: slides by Lukas Steinwender
 * shared memory
 * can only use a single machine
     * but multiple cores
-* [Python](../day1_02_python/01_python_slides.md): [joblib](https://joblib.readthedocs.io)
+* [Python](../session1_02_python/01_python_slides.md): [joblib](https://joblib.readthedocs.io)
 
 ---
 # MPI (Message Passing Interface)
@@ -34,7 +34,7 @@ footer: slides by Lukas Steinwender
 * each process has its own memory
 * can scale across multiple machines
 * can adapt to more settings
-* [Python](../day1_02_python/01_python_slides.md): [mpi4py](https://mpi4py.readthedocs.io/en/stable/)
+* [Python](../session1_02_python/01_python_slides.md): [mpi4py](https://mpi4py.readthedocs.io/en/stable/)
     * requires [OpenMPI](https://docs.open-mpi.org/en/v5.0.x/index.html) to be installed
     * done for you on OzSTAR
 
