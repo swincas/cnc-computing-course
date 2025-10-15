@@ -1,5 +1,5 @@
 [project]
-name = "cnc-computing-course"
+name = "cn5_pkg"
 version = "0.1.0"
 description = "Content for the CAS Cookies-n-Code Computing Course (CN5)"
 authors = [
