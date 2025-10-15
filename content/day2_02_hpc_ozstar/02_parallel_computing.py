@@ -2,9 +2,16 @@
 from joblib.parallel import Parallel, delayed
 import logging
 import numpy as np
+import os
+import sys
 import time
 from typing import Callable, List
-from utils import runtime_estimate
+
+DIR_PATH:str = os.path.dirname(os.path.realpath(__file__)) + "/"    #path to current directory
+ROOT_PATH:str = f"{DIR_PATH}../../"                                 #path to project root
+sys.path.append(ROOT_PATH)                                          #make sure root is visible to python
+
+from cn5_pkg.cn5 import runtime_estimate
 
 logger = logging.getLogger()
 logging.basicConfig(level=logging.DEBUG)

@@ -1,9 +1,10 @@
+#Lukas Steinwender
+
 #%%imports
 import logging
 
-
-logger = logging.getLogger()                   #root logger
-local_logger = logging.getLogger(__name__)     #locoal logger
+logger = logging.getLogger()                    #root logger
+local_logger = logging.getLogger(__name__)      #locoal logger
 logging.basicConfig(level=logging.WARNING)      #only show warnings
 local_logger.setLevel(logging.DEBUG)            #all logged messages
 

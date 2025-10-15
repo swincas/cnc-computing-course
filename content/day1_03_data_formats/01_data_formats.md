@@ -47,14 +47,7 @@ hdul = fits.open(<path/to/file.fits>)
 fits.close()                            #never forget to clean up!
 hdul.info()
 ```
-```python
-#writing
-from astropy.table import Table
-with fits.open(<path/to/file.fits>, "w") as hdul:
-    hdul.write(<path/to/file.fits>, <data>, <header>)
-t = Table(<data>, names=<names>)
-t.write(<path/to/file.fits>, format="fits")
-```
+* for writing see `makefits()` in [data_formats.py](./01_data_formats.py)
 ---
 ## Industry Standards: [Apache Parquet](https://parquet.apache.org/)
 * accessible through [Pandas](https://pandas.pydata.org/docs/reference/api/pandas.read_parquet.html), [polars](https://docs.pola.rs/api/python/stable/reference/api/polars.read_parquet.html)
