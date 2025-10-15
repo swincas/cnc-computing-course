@@ -1,5 +1,5 @@
 [project]
-name = "cn5_pkg"
+name = "cnc-computing-course"
 version = "0.1.0"
 description = "Content for the CAS Cookies-n-Code Computing Course (CN5)"
 authors = [
@@ -26,6 +26,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
+
+[build-system]
+requires = ["uv_build>=0.8.13,<0.9.0"]
+build-backend = "uv_build"
 
 #custom stuff
 [project.urls]
