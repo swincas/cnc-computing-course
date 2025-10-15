@@ -7,6 +7,7 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 ## Notes
 
 ### Installable Parts
+
 > [!IMPORTANT] the [cn5_pkg](./cn5_pkg/) is installable.
 > This way you can use the utility functions easily in your own scripts.
 
