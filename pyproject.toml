@@ -9,16 +9,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "astropy>=7.1.0",
-    "h5py>=3.15.0",
-    "ipykernel>=7.0.0",
-    "joblib>=1.5.2",
-    "matplotlib>=3.10.6",
-    "memory-profiler>=0.61.0",
-    "mpi4py>=4.1.1",
     "numpy>=2.3.3",
-    "pandas>=2.3.3",
-    "pyarrow>=21.0.0",
 ]
 
 license = {file = "LICENSE"}
@@ -36,6 +27,22 @@ build-backend = "uv_build"
 Homepage = "https://github.com/swincas/cnc-computing-course"
 Repository = "https://github.com/swincas/cnc-computing-course"
 Issues = "https://github.com/swincas/cnc-computing-course/issues"
+
+[project.optional-dependencies]
+mpi = [
+    "mpi4py>=4.1.1",
+]
+cn5course = [
+    "astropy>=7.1.0",
+    "h5py>=3.15.0",
+    "ipykernel>=7.0.0",
+    "joblib>=1.5.2",
+    "matplotlib>=3.10.6",
+    "memory-profiler>=0.61.0",
+    "mpi4py>=4.1.1",
+    "pandas>=2.3.3",
+    "pyarrow>=21.0.0",
+]
 
 [tool.uv.build-backend]
 module-root = "."           #Adjusts where UV looks for code modules
