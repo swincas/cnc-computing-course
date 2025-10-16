@@ -43,7 +43,9 @@ jupyter-core==5.8.1
 kiwisolver==1.4.9
     # via matplotlib
 matplotlib==3.10.7
-    # via cn5-pkg (pyproject.toml)
+    # via
+    #   cn5-pkg (pyproject.toml)
+    #   seaborn
 matplotlib-inline==0.1.7
     # via
     #   ipykernel
@@ -63,6 +65,8 @@ numpy==2.3.3
     #   matplotlib
     #   pandas
     #   pyerfa
+    #   scipy
+    #   seaborn
 packaging==25.0
     # via
     #   astropy
@@ -70,7 +74,9 @@ packaging==25.0
     #   matplotlib
     #   pytest
 pandas==2.3.3
-    # via cn5-pkg (pyproject.toml)
+    # via
+    #   cn5-pkg (pyproject.toml)
+    #   seaborn
 parso==0.8.5
     # via jedi
 pexpect==4.9.0
@@ -117,6 +123,10 @@ pyzmq==27.1.0
     # via
     #   ipykernel
     #   jupyter-client
+scipy==1.16.2
+    # via cn5-pkg (pyproject.toml)
+seaborn==0.13.2
+    # via cn5-pkg (pyproject.toml)
 six==1.17.0
     # via python-dateutil
 stack-data==0.6.3
