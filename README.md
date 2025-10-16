@@ -40,6 +40,11 @@ cn5.runtime_estimate(<args>)
 * when presenting it is useful to enable `screencast mode`
     * enable via `ctrl+shift+P > Developer: Toggle Screencast Mode`
     * ensures people can see your keystrokes
+* compiling the requirements files can be done easily using [uv](https://docs.astral.sh/uv/)
+```bash
+uv pip compile pyproject.toml --extra cn5course -o requirements.txt                 #no mpi
+uv pip compile pyproject.toml --extra cn5course --extra mpi -o requirements_mpi.txt #with mpi (for OzSTAR)
+```
 
 ## Preliminary Tasks For Attendees
 - [ ] create git account
