@@ -1,4 +1,5 @@
 #%%imports
+import logging
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -10,6 +11,9 @@ warnings.filterwarnings("ignore")   #filter warnings
 DIR_PATH:str = os.path.dirname(os.path.realpath(__file__)) + "/"    #path to current directory
 ROOT_PATH:str = f"{DIR_PATH}../../"                                 #path to project root
 sys.path.append(ROOT_PATH)                                          #make sure root is visible to python
+
+logger = logging.getLogger()
+logging.basicConfig(level=logging.WARNING)
 
 from cn5_pkg import cn5
 

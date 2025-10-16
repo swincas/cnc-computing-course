@@ -3,9 +3,6 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 * yes, the slides are pretty full... this is because this repo shall (alongside course material) mainly serve as a resource to find useful information
 
 ## TODO
-- [ ] [session1_02_python/](./content/session1_02_python/)
-    - [ ] pandas demo
-    - [ ] astropy demo
 - [ ] [session3_02_interactive_computing/](./content/session3_02_interactive_computing/)
     - [ ] jupyter on ozstar
 

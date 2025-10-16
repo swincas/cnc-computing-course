@@ -108,14 +108,14 @@ pip3 install -e <path/to/your/package>
 ![bg 50% vertical right:30%]("")
 
 * main package for numerical computations
-* philosophy
-    * vectorization > parallelisation
+* philosophy: vectorization > parallelisation
 * row-indexed
 * need for speed
     * compile to `C`
     * consistent data types
     * views > copies
 * enhancements: `np.einsum()`, [Einops](https://einops.rocks/)
+* [examples](./01_numpy.py)
 
 > make use of `@np.vecrtorize` to increase speed ([example](../session2_02_hpc_ozstar/02_parallel_computing.py))
 
@@ -151,6 +151,7 @@ render-hieararchy:
 ### Approach 1: [style sheets](https://matplotlib.org/stable/users/explain/customizing.html#customizing-with-style-sheets)
 * default [matplotlibrc file](https://matplotlib.org/stable/users/explain/customizing.html#matplotlibrc-sample)
 * use via the following
+* [examples](./02_matplotlib.py)
 
 ```python
 plt.style.use("<path/to/yout/file.mplstyle")
@@ -159,6 +160,8 @@ plt.style.use("<path/to/yout/file.mplstyle")
 ### Approach 2: Function + `plt.rcParams`
 * see [this repo](https://github.com/TheRedElement/LuStCodeSnippets/blob/main/LuStCodeSnippets_py/Styles/PlotStyles.py) for examples
 * see [here](https://github.com/TheRedElement/LuStCodeSnippets/blob/main/LuStCodeSnippets_py_demos/Styles_demos/PlotStyles_demo.ipynb) for usage demos
+* [examples](./02_matplotlib.py)
+
 
 ---
 # Data Frames
@@ -171,13 +174,13 @@ plt.style.use("<path/to/yout/file.mplstyle")
 ## [pandas](https://pandas.pydata.org/)
 * processing tabular data efficiently
 * loads of convenience methods and functions
-* has some convenient plotting capabilities
+* [examples](./03_pandas.py)
 
 ## [Polars](https://pola.rs/)
 * [pandas](#pandas) on steroids
-* not as many conveniences, but but efficient in
-    * memory
-    * speed
+* not as many conveniences, but but efficient (memory, speed)
+* [examples](https://colab.research.google.com/drive/1kb6Zi90Kul6vIhjQLlU666e8fiCJ_Lzx)
+
 
 ---
 ![bg 70% vertical right:30%]("")
@@ -188,33 +191,13 @@ plt.style.use("<path/to/yout/file.mplstyle")
 # [astropy](https://docs.astropy.org/)
 * developed specifically for astronomy
 * useful intergations
-    * astronomical data-formats
-    * units
-    * coordinates
-    * coordinate systems
+    * [astronomical data-formats](../session1_03_data_formats/)
+    * [units](https://docs.astropy.org/en/stable/units/index.html)
+    * [ND data processing](https://docs.astropy.org/en/latest/nddata/index.html)
+    * [coordinates](https://docs.astropy.org/en/stable/coordinates/index.html) ([SkyCoord](https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html), [World Coordinate System](https://docs.astropy.org/en/stable/wcs/index.html)), 
+    * [cosmology](https://docs.astropy.org/en/stable/cosmology/ref_api.html) ([FlatLambdaCDM](https://docs.astropy.org/en/stable/api/astropy.cosmology.FlatLambdaCDM.html))
+* [examples](./04_astropy.py)
 
----
-## Snippets
-* [ND data processing](https://docs.astropy.org/en/latest/nddata/index.html)
-```python
-from astropy.nddata import Cutout2D
-cutout = Cutout2D(<img>, position=<coords_center>, size=<size_pixels>, wcs=<img_wcs>)                           
-fig, axs = plt.subplots(1,1, suplot_kw=dict(projection=cutout.wcs))
-axs.imshow(cutoput.data)
-```
-* [coordinates](https://docs.astropy.org/en/stable/coordinates/index.html)
-```python
-from astropy.coordinates import SkyCoord
-coords1 = SkyCoord(ra=<ra>, dec=<dec>, unit=(<ra_unit>,<dec_unit>), frame="fk5")
-coords2 = SkyCoord(ra=<ra>, dec=<dec>, unit=(<ra_unit>,<dec_unit>), frame="fk5")                
-idx, d2d, d3d = coords2.mathr_co_catalog_3d(coords1)    #crossmatch
-dists = coords1.separation(coords2)                     #separation
-```
-* [FlatLambdaCDM](https://docs.astropy.org/en/stable/api/astropy.cosmology.LambdaCDM.html) cosmology
-```python
-from astropy.cosmology import LambdaCDM                                                     
-cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
-```
 ---
 
 # Other Useful Packages
@@ -234,6 +217,7 @@ cosmo = FlatLambdaCDM(H0=70, Om0=0.3)
 # Good Practises: [logging](https://docs.python.org/3/library/logging.html)
 * `print()` can go haywire especially on supercomputer
 * [logging](https://docs.python.org/3/library/logging.html) allows customization of displayed messages
+* [examples](./05_logging.py)
 
 ```python
 import logging

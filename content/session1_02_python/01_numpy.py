@@ -1,10 +1,11 @@
 #%%imports
 import logging
 import numpy as np
+
 from cn5_pkg import cn5
 
 logger = logging.getLogger()
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 
 #%%definitions
 def row_index(a:np.ndarray):
