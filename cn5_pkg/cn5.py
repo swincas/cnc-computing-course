@@ -4,6 +4,7 @@
     - author: Lukas Steinwender
 """
 #%%imports
+from cycler import cycler
 from datetime import datetime, timedelta
 import logging
 import numpy as np
@@ -96,6 +97,55 @@ def runtime_estimate(
     rt_est = rt_mean * nest
     logger.info(f"{prefix}mean runtime over {nreps} executions: {rt_mean} => estimate for {nest} executions: {rt_est}")
     return rt_mean, rt_est
+
+def cn5_style():
+    """
+        - function defining the custom cn5 style
+
+        Parameters
+        ----------
+
+        Raises
+        ------
+
+        Returs
+        ------
+            - `hatches`
+                - `List[str]`
+                - hatches to iterate through for unque hatches
+        
+        Dependencies
+        ------------
+            - `cylcler`
+            `matplotlib`
+        
+        Comments
+        --------
+    """
+
+    hatches = ["/", "\\", "o", "|"]
+    prop_cycle = (
+        cycler(linestyle=["-","--", ":", "-."]) +
+        cycler(color=["#ffffff", "#CA7D33", "#974D13", "#3E2114"])
+    )
+
+    #color scheme
+    plt.rcParams["figure.facecolor"]        = "#333333"
+    plt.rcParams["axes.facecolor"]          = "#333333"
+    plt.rcParams["text.color"]              = "#ffffff"
+    plt.rcParams["xtick.color"]             = "#ffffff"
+    plt.rcParams["ytick.color"]             = "#ffffff"
+    plt.rcParams["axes.labelcolor"]         = "#ffffff"
+    plt.rcParams["axes.edgecolor"]          = "#ffffff"
+    plt.rcParams["legend.facecolor"]        = "inherit"
+    plt.rcParams["legend.edgecolor"]        = "inherit"
+    plt.rcParams["axes.prop_cycle"]         = prop_cycle
+    plt.rcParams["image.cmap"]              = "Oranges"
+    plt.rcParams["axes3d.xaxis.panecolor"]  = (1,1,1,.1)
+    plt.rcParams["axes3d.yaxis.panecolor"]  = (1,1,1,.1)
+    plt.rcParams["axes3d.zaxis.panecolor"]  = (1,1,1,.1)
+
+    return hatches
 
 def plot_lc(ax:plt.Axes,
     time:np.ndarray, flux:np.ndarray, flux_e:np.ndarray, bands:np.ndarray=None,

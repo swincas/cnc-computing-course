@@ -3,7 +3,12 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 * yes, the slides are pretty full... this is because this repo shall (alongside course material) mainly serve as a resource to find useful information
 
 ## TODO
- 
+- [ ] [session1_02_python/](./content/session1_02_python/)
+    - [ ] pandas demo
+    - [ ] astropy demo
+- [ ] [session3_02_interactive_computing/](./content/session3_02_interactive_computing/)
+    - [ ] jupyter on ozstar
+
 ## Notes
 
 ### Installable Parts
@@ -84,7 +89,8 @@ git clone https://github.com/swincas/cnc-computing-course.git
     * graphics used in presentations and generated when running scripts
 * [styles/](./styles/)
     * custom Cn5 styles
-    * i.e., css style for the slides
+        * css style for the slides
+        * mplstyle for plots
 * [templates/](./templates/)
     * templates to copy and paste
     * i.e., for slides

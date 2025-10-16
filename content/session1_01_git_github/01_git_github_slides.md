@@ -114,7 +114,21 @@ gitGraph
     * you are in control of that copy
 * original developers do not know about forked copy
 * `push` changes only affect your forked copy
-* edits to original can be suggested via pull requests
+* edits to original can be suggested via [pull requests](#pull-requests)
+
+---
+## Pull Requests
+* [fork](#fork-new-isolated-copy) repository you want to contribute to
+* `git clone` [forked repo](#fork-new-isolated-copy) to your local machine
+* create new working branch: `git checkout -b <your feature>`
+* make changes
+* `add`, `commit`, `push`
+* on [GitHub](#github)
+    * navigate to `pull request` tab
+    * click `new pull request`
+    * select you want to merge from on the right (your new branch)
+    * select branch to merge into on the left (main of original repo)
+    * click `create pull request`
 
 ---
 # Industry Workflows

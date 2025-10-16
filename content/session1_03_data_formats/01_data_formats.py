@@ -21,6 +21,7 @@ from cn5_pkg import cn5
 logger = logging.getLogger()
 logging.basicConfig(level=logging.INFO)
 
+cn5.cn5_style()
 
 #%%definitions
 def makefits(datadir:str):
