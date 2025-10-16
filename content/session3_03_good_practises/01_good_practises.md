@@ -27,6 +27,63 @@ footer: slides by Lukas Steinwender
     * easy to debug
 
 ---
+# Code Planning
+
+## Questions to Ask
+* what shall my code do
+* what are the steps to get there
+* how do I complete each step
+    * input, methods, output
+
+---
+## Pseudocode
+
+> description of an algorithm in a mixture of plain english and programming language conventions
+
+* easy to understand
+* language independent
+* focus on **fundamental logic** without worrying about syntax
+* should (in principle) compile without errors
+
+
+```julia
+#pseudocode for gradient decent
+choose x_0, learning rate: tau
+for all k >= 0 do
+    x_(k+1) = x_k - tau * gradient(f(x_k))
+end for           
+```
+
+---
+## Flowcharting
+* graphical alternative to [pseudocode](#pseudocode)
+* start simple, get more elaborate (function inputs, memory allocations, ...)
+* tools
+    * pen and paper
+    * [Mermaid](https://mermaid.js.org/)
+* for the [pseudocode](#pseudocode) example:
+```mermaid
+flowchart LR
+    start@{ shape: start, label: "Start"}
+    init@{ shape: rect, label: "init parameters"}
+    increment@{ shape: rect, label: "proceed to next iteration"}
+    grad@{ shape: process, label: "compute gradient"}
+    update@{ shape: process, label: "update parameters using gradient"}
+    check@{ shape: decision, label: "maximum number of iterations reached?"}
+    output@{ shape: in-out, label: "output optimal solution"}
+    stop@{ shape: stop, label: "End"}
+
+    start --> init
+    init --> increment
+    increment --> grad 
+    grad --> update
+    update --> check
+    check -->|yes| output
+    output --> stop
+    check -->|no| increment
+```
+
+---
 
 # Naming Conventions
 <!-- note on tables: I name all columns lowercase, connected with underscores, ASCII characters only -->
