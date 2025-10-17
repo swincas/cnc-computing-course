@@ -190,7 +190,7 @@ plt.style.use("<path/to/yout/file.mplstyle")
 
 # [astropy](https://docs.astropy.org/)
 * developed specifically for astronomy
-* useful intergations
+* useful integrations
     * [astronomical data-formats](../session1_03_data_formats/)
     * [units](https://docs.astropy.org/en/stable/units/index.html)
     * [ND data processing](https://docs.astropy.org/en/latest/nddata/index.html)
