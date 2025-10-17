@@ -3,8 +3,6 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 * yes, the slides are pretty full... this is because this repo shall (alongside course material) mainly serve as a resource to find useful information
 
 ## TODO
-- [ ] [session3_02_interactive_computing/](./content/session3_02_interactive_computing/)
-    - [ ] jupyter on ozstar
 
 ## Notes
 
