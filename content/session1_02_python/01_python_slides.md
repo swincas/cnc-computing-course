@@ -71,7 +71,7 @@ pip freeze > <path/to/requirements.txt>             #sharing
 > 1. initialize a new [virtual environment](#virtual-environments)
 > 1. activate it
 > 1. install all the packages needed for the remainder of the course using the [requirements.txt](../../requirements.txt) file
-
+> 1. install the [cn5_pkg/](../../cn5_pkg/) by calling `pip3 install .` from the project root
 <!--
 in code-snippets git repo use UV (later in the course)
 -->

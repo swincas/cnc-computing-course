@@ -26,7 +26,7 @@ footer: slides by Lukas Steinwender
     * based on my [RepoTemplate](https://github.com/TheRedElement/RepoTemplate_LuSt/tree/main/code)
 * clone created repo to local machine
 ```bash
-git clone --recurese-submodules <repo url>
+git clone --recurse-submodules <repo url>
 ```
 
 * navigate to code snippets submodule (within created repo) and sync
