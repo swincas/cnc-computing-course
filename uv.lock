@@ -354,6 +354,7 @@ name = "cn5-pkg"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "matplotlib" },
     { name = "numpy" },
 ]
 
@@ -364,7 +365,6 @@ cn5course = [
     { name = "ipykernel" },
     { name = "joblib" },
     { name = "jupyter" },
-    { name = "matplotlib" },
     { name = "memory-profiler" },
     { name = "pandas" },
     { name = "pyarrow" },
@@ -383,7 +383,7 @@ requires-dist = [
     { name = "ipykernel", marker = "extra == 'cn5course'", specifier = ">=7.0.0" },
     { name = "joblib", marker = "extra == 'cn5course'", specifier = ">=1.5.2" },
     { name = "jupyter", marker = "extra == 'cn5course'", specifier = ">=1.1.1" },
-    { name = "matplotlib", marker = "extra == 'cn5course'", specifier = ">=3.10.6" },
+    { name = "matplotlib", specifier = ">=3.10.6" },
     { name = "memory-profiler", marker = "extra == 'cn5course'", specifier = ">=0.61.0" },
     { name = "mpi4py", marker = "extra == 'mpi'", specifier = ">=4.1.1" },
     { name = "numpy", specifier = ">=2.3.3" },
