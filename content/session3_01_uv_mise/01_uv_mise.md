@@ -35,9 +35,10 @@ $$\textcolor{red}{\text{\large unfortunately NOT useable on OzStar (quota limit)
 * [installation](https://mise.jdx.dev/getting-started.html)
 ```bash
 curl https://mise.run | sh
-~/.local/bin/mise --version                 #testing
-echo "" >> ~/.bashrc                        #add to .bashrc
-echo "#%%mise-en-place path" >> ~/.bashrc   #add to .bashrc                                     
+~/.local/bin/mise --version                                     #testing
+echo "" >> ~/.bashrc                                            #add to .bashrc
+echo "#%%activate mise-en-place" >> ~/.bashrc                   #add to .bashrc
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc   #add to .bashrc                         
 ```
 
 * global installs
