@@ -64,22 +64,22 @@ git clone https://github.com/swincas/cnc-computing-course.git
 
 ## Agenda
 1. Day 1
+    1. [bash intro](./content/session1_01_bash)
     1. [git and github](./content/session1_01_git_github/)
-    1. [python and venvs](./content/session1_02_python/)
-    1. [data formats](./content/session1_03_data_formats/)
+    1. [ssh keys](./content/session1_03_sshkeys)
 1. Day 2
-    1. [bash intro](./content/session2_01_bash/)
+    1. [python and venvs](./content/session1_02_python/)
     1. [hpc and ozstar](./content/session2_02_hpc_ozstar/)
+    1. [data formats](./content/session1_03_data_formats/)
 1. Day 3
-    1. [uv and mise](./content/session3_01_uv_mise/)
+    1. [good practises](./content/session3_01_good_practises)
     1. [interactive computing](./content/session3_02_interactive_computing/)
-    1. [good practises](./content/session3_03_good_practises/)
+    1. [uv and mise](./content/session3_03_uv_mise)
 1. Day 4
     1. OzSTAR tour
 1. Day 5
     1. [vscode](./content/session4_01_vscode/)
     1. [end2end workflows](./content/session4_02_end2end_workflows/)
-    1. [ssh keys](./content/session4_03_sshkeys/)
     1. Q&A
 
 ## Repo Structure

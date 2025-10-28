@@ -71,6 +71,14 @@ Invoke-Expression -Command "$(ssh-agent -s)"    #windows
 ```bash
 ssh-add <key name>
 ```
+---
+## SSH and GitHub
+* go to [GitHub > Settings > SSH and GPG keys](https://github.com/settings/keys)
+* click `new SSH key` and follow instructions
+* testing authentication
+```bash
+ssh -T git@github.com
+```
 
 ---
 ## SSH Agent Forwarding
