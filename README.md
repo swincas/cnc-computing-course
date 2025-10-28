@@ -43,6 +43,11 @@ cn5.runtime_estimate(<args>)
 uv pip compile pyproject.toml --extra cn5course -o requirements.txt                 #no mpi
 uv pip compile pyproject.toml --extra cn5course --extra mpi -o requirements_mpi.txt #with mpi (for OzSTAR)
 ```
+* compiling the presentations to `html` can be done by calling the following from root
+```bash
+marp content/session*/*.md --allow-local-files --theme ./styles/cn5_style.css
+```
+* using the [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension you can view the slides in VSCode
 
 ## Preliminary Tasks For Attendees
 - [ ] create git account
