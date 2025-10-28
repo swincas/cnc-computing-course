@@ -119,11 +119,14 @@ pip3 install -r requirements.txt
 ```
 
 ## Comandline Tools
+* powerful for code that is executed often
+> use a separate uv project for each commandline tool
+
 ```bash
 uv init --package <package-name>
 uv run <command>
 ```
-
+* see [commandlinetool/](../session3_01_good_practises/commandlinetool/) for an example
 ---
 # End2End Workflow
 ```bash

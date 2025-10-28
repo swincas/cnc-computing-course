@@ -22,8 +22,8 @@ footer: slides by Lukas Steinwender
 > used by many high-performance clusters (HPC) around the globe
 
 --- 
-# Startup Files and `.bashrc`
-* startup files
+# Startup Files
+* names and locations:
     * `/etc/profile`
     * `~/.bash_profile`
     * `~/.bash_login`

@@ -84,7 +84,7 @@ module load ipython/9.3.0       #for interactive computing
 ```
 
 ---
-# Let's Set Up a [.bashrc](../session2_01_bash/01_bash.md) on OzSTAR!
+# Let's Set Up a [.bashrc](../session1_01_bash/01_bash.md) on OzSTAR!
 * adding commonly used modules
 * adding aliases
 

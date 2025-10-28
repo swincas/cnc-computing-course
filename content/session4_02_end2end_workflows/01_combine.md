@@ -35,14 +35,14 @@ cd <path/to/codesnippets>
 git pull
 ```
 
-* navigate to repo and init [mise](../session3_01_uv_mise/01_uv_mise.md) project
+* navigate to repo and init [mise](../session3_03_uv_mise/01_uv_mise.md) project
 ```bash
 cd <path/to/project>
 mise use <version to be used>
 ```
 
 * if [Python](../session1_02_python/01_python_slides.md)
-    * load [uv](../session3_01_uv_mise/01_uv_mise.md)
+    * load [uv](../session3_03_uv_mise/01_uv_mise.md)
     * init uv project
 ```bash
 mise use uv@latest
