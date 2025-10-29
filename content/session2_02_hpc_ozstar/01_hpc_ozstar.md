@@ -168,7 +168,7 @@ source .venv/bin/activate   #activate environment
 mprof run code/session2_02_hpc_ozstar/01_resource_estimate.py
 mprof plot -o "mprofile_plot.png"
 ```
-* [01_resource_estimate.py](code/session2_02_hpc_ozstar/01_resource_estimate.py) contains
+* [01_resource_estimate.py](content/session2_02_hpc_ozstar/01_resource_estimate.py) contains
     * function to estimate resources
     * main function to be executed
 
@@ -183,7 +183,7 @@ mprof plot -o "mprofile_plot.png"
 
 #SBATCH --job-name=myjob     #job name
 
-#SBATCH --array=0-2                     #slurm array to execute multiple jobs at once
+##SBATCH --array=0-2                     #slurm array to execute multiple jobs at once
 #SBATCH --output=./execlogs/%x_%a.out
 #SBATCH --error=./execlogs/%x_%a.err
 
