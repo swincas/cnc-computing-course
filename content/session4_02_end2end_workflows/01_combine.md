@@ -50,14 +50,14 @@ uv init --bare
 ```
 
 * fill `./README.md` with basic information
-* choose a [git](../session1_01_git_github/01_git_github_slides.md) workflow
+* choose a [git](../session1_02_git_github/01_git_github_slides.md) workflow
     * create respective branches
     * **stick with it for the duration of the project**
 * start coding
 
 ## While Coding
 * temporary files and figures have the `temp_` prefix
-    * will not be synced to [git](../session1_01_git_github/)
+    * will not be synced to [git](../session1_02_git_github)
 * all created figures are stored in `./report/gfx/`
     * one place for all of them
 * progress is reported in `./summary.md`

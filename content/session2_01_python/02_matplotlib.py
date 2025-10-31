@@ -68,7 +68,14 @@ def main():
 
     #using function with `plt.rcParams`
     hatches = cn5.cn5_style()
+    # plt.savefig("temp.png")
     testplot(hatches)
+
+    #in-place modifications
+    plt.rcParams["figure.facecolor"] = "#DE0000"
+    plt.rcParams["savefig.transparent"] = True
+    testplot(hatches)
+    
     plt.style.use("default")    #back to default
 
     plt.show()  #avoid multiple `plt.show()`

@@ -65,7 +65,7 @@ git clone https://github.com/swincas/cnc-computing-course.git
 ## Agenda
 1. Day 1
     1. [bash intro](./content/session1_01_bash)
-    1. [git and github](./content/session1_01_git_github/)
+    1. [git and github](./content/session1_02_git_github)
     1. [ssh keys](./content/session1_03_sshkeys)
 1. Day 2
     1. [python and venvs](./content/session1_02_python/)

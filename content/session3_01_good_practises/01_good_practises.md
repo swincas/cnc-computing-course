@@ -115,7 +115,7 @@ flowchart LR
     * [logging](./../session1_02_python/01_python_slides.md) for insight and debugging
 
 # Testing
-* remember [session1_02_python](../session1_02_python)?
+* remember [session2_01_python](../session2_01_python)?
     * [cn5_test.py](../../test/cn5_test.py) was the example we had
 ---
 # 3-Step Process
@@ -134,7 +134,6 @@ flowchart LR
 # Conquer the Commandline
 
 * powerful for code that is executed often
-
 * can also be done using python
 ```bash
 python <yoursript.py> [args]
@@ -143,7 +142,7 @@ python <yoursript.py> [args]
     * see [commandlinetool/](./commandlinetool/) for an example
 ```bash
 #run from project root
-python3 content/session3_03_good_practises/commandlinetool/src/commandlinetool/main.py 1 -o "optarg"
+python3 content/session3_01_good_practises/commandlinetool/src/commandlinetool/main.py 1 -o "optarg"
 ```
 
 * [uv](../session3_03_uv_mise/01_uv_mise.md) allows easy creation of commandline tools

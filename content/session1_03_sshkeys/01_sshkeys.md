@@ -83,7 +83,7 @@ ssh -T git@github.com
 ---
 ## SSH Agent Forwarding
 
-* allows using of [GitHub](../session1_01_git_github/01_git_github_slides.md) on [OzStar](../session2_02_hpc_ozstar/01_hpc_ozstar.md)
+* allows using of [GitHub](../session1_02_git_github/01_git_github_slides.md) on [OzStar](../session2_02_hpc_ozstar/01_hpc_ozstar.md)
 * add the following to your `.bashrc` (`.bash_profile` file)
 ```bash
 echo "Setting up agent forwarding"      #make sure script talks to me
