@@ -58,7 +58,10 @@ quota
 * in case `quota` are exceeded or you need specific custom software
     * use [Apptainers](https://supercomputing.swin.edu.au/docs/2-ozstar/Apptainer.html)
         * isolate anything contained
-
+```bash
+#uploading big data to OzStar
+rsync -avPxH --no-g --chmod=Dg+s <path/to/files> <username>@data-mover01.hpc.swin.edu.au:<path/to/remote/destination>
+```
 ---
 # Modules
 * prepackaged stacks of software
