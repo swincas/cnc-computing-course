@@ -118,6 +118,8 @@ gitGraph
 
 ---
 ## Pull Requests
+![h: 50%](../../gfx/fork_github.png)
+
 * [fork](#fork-new-isolated-copy) repository you want to contribute to
 * `git clone` [forked repo](#fork-new-isolated-copy) to your local machine
 * create new working branch: `git checkout -b <your feature>`
