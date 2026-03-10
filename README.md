@@ -46,7 +46,7 @@ uv pip compile pyproject.toml --extra cn5course --extra mpi -o requirements_mpi.
 * to compile all marp presentations to html you can use marp
     1. install the marp client
         1. using [mise](./content/session3_01_uv_mise/01_uv_mise.md): `mise use marp-cli`
-    2. call `marp "content/**/*.md" --html` from the repository root
+    2. call ` marp "content/**/*.md" --html --theme styles/cn5_style.css` from the repository root
 
 ## Preliminary Tasks For Attendees
 - [ ] create git account
