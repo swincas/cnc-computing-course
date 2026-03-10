@@ -128,3 +128,6 @@ git clone https://github.com/swincas/cnc-computing-course.git
     * install via `pip3 install -r requirements.txt`
 * [uv.lock](./uv.lock)
     * current state of the python environment as observed by [uv](https://docs.astral.sh/uv/)
+
+
+    change readme
