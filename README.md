@@ -24,6 +24,9 @@ from cn5_pkg import cn5
 cn5.runtime_estimate(<args>)
 ```
 
+
+CHANGING README!!!!
+
 > [!IMPORTANT]
 > If you find the [cn5_pkg](./cn5_pkg/) package useful for your work, a brief acknowledgement would be appreciated:
 > We/I acknowledge the Cookie Monsters from the Swinburne Centre for Astrophysics and Supercomping (CAS), who made their utility functions available on github (https://github.com/swincas/cnc-computing-course.git).
