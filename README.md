@@ -3,6 +3,8 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 * yes, the slides are pretty full... this is because this repo shall (alongside course material) mainly serve as a resource to find useful information
 
 ## TODO
+- [ ] rename files to reflect actual sessions
+- [ ] convert marp to html
 
 ## Notes
 
