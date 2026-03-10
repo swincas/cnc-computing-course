@@ -157,6 +157,7 @@ gitGraph
     merge feature2 id: "v2.0"
     merge feature3 id: "v3.0"
 ```
+
 * lightweight
 * small projects
 * straightforward
@@ -166,47 +167,49 @@ gitGraph
 ---
 
 ## Git Flow
-```mermaid
-    gitGraph
-        commit id: "v0.1"
-        %%setup long-lived branches
-        branch hotfix order: 2
-        branch dev order: 3
-        %%add commit history
-        checkout dev
-            commit id: "new feature1"
-        checkout hotfix
-            commit id: "fix1"
-        checkout main
-            merge hotfix id: "v0.2"
-        checkout dev
-            branch feature1 order: 5
-        checkout feature1
-            commit id: "feature1.1"
-        checkout dev
-            commit id: "new feature2"
-            branch feature2 order: 4
-        checkout feature2
-            commit id: "feature2.1"
-        checkout dev
-            merge hotfix
-        checkout feature2
-            commit id: "feature2.2"
-        checkout feature1
-            commit id: "feature1.2"
-        checkout dev
-            merge feature2
-        branch release order: 2
-        checkout release
-            commit id: "release testing"
-            commit id: "release bug fixes"
-        checkout main
-            merge release id: "v1.0"
-        checkout dev
-            merge release
-        checkout feature1
-            commit id: "feature1.3"
-```
+<div class="mermaid">
+<!-- ```mermaid -->
+gitGraph
+    commit id: "v0.1"
+    %%setup long-lived branches
+    branch hotfix order: 2
+    branch dev order: 3
+    %%add commit history
+    checkout dev
+        commit id: "new feature1"
+    checkout hotfix
+        commit id: "fix1"
+    checkout main
+        merge hotfix id: "v0.2"
+    checkout dev
+        branch feature1 order: 5
+    checkout feature1
+        commit id: "feature1.1"
+    checkout dev
+        commit id: "new feature2"
+        branch feature2 order: 4
+    checkout feature2
+        commit id: "feature2.1"
+    checkout dev
+        merge hotfix
+    checkout feature2
+        commit id: "feature2.2"
+    checkout feature1
+        commit id: "feature1.2"
+    checkout dev
+        merge feature2
+    branch release order: 2
+    checkout release
+        commit id: "release testing"
+        commit id: "release bug fixes"
+    checkout main
+        merge release id: "v1.0"
+    checkout dev
+        merge release
+    checkout feature1
+        commit id: "feature1.3"
+</div>
+<!-- ``` -->
 
 * more complex
 * allows parallel development
