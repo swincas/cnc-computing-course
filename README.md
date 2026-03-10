@@ -6,6 +6,8 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 
 ## Notes
 
+we have a GitHub Pages homepage now: [swincas.github.io/cnc-computing-course/](https://swincas.github.io/cnc-computing-course/)
+
 ### Installable Parts
 
 > [!IMPORTANT]
