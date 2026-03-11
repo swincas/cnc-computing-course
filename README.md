@@ -5,6 +5,7 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 ## TODO
 
 ## Notes
+I'm just trying to help
 
 ### Installable Parts
 
