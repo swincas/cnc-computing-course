@@ -213,7 +213,7 @@ def plot_lc(ax:plt.Axes,
     #default parameters
     if bands is None: bands = np.full_like(time, 0)
     if unique_bands is None: unique_bands = np.unique(bands)
-    print(bands, unique_bands)
+    # print(bands, unique_bands)
 
     #get colors
     norm = mcolors.Normalize(vmin=0, vmax=len(unique_bands))

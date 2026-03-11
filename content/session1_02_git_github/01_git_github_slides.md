@@ -64,6 +64,20 @@ git log --graph --oneline --decorate --all --color
 ```
 
 ---
+## Repository Layout
+
+* `.git/` directory
+    * [GitHub](https://github.com/)s way of tracking changes, branches, etc.
+* `.gitignore`
+    * powerful file specifying what shall and shall not be tracked
+* `README.md` (optional - but basically **required**)
+    * essentially welcome page
+    * project outline and summary
+    * quick reference
+* `LICENSE` (optional)
+    * license file for publishing
+
+---
 
 ## Rebase vs Merge
 
@@ -167,8 +181,8 @@ gitGraph
 ---
 
 ## Git Flow
-<div class="mermaid">
-<!-- ```mermaid -->
+<!-- <div class="mermaid"> -->
+```mermaid
 gitGraph
     commit id: "v0.1"
     %%setup long-lived branches
@@ -208,8 +222,8 @@ gitGraph
         merge release
     checkout feature1
         commit id: "feature1.3"
-</div>
-<!-- ``` -->
+```
+<!-- </div> -->
 
 * more complex
 * allows parallel development

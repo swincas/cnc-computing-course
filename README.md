@@ -3,7 +3,6 @@ Content for the CAS Cookies-n-Code Computing Course (CN5)
 * yes, the slides are pretty full... this is because this repo shall (alongside course material) mainly serve as a resource to find useful information
 
 ## TODO
-- [ ] rename files to reflect actual sessions
 - [ ] convert marp to html
 
 ## Notes
@@ -66,23 +65,23 @@ git clone https://github.com/swincas/cnc-computing-course.git
 ```
 
 ## Agenda
-1. Day 1
-    1. [git and github](./content/session1_01_git_github/)
+1. Session 1
+    1. [bash intro](./content/session1_01_bash)
+    1. [git and github](./content/session1_02_git_github)
+1. Session 2
     1. [python and venvs](./content/session1_02_python/)
     1. [data formats](./content/session1_03_data_formats/)
-1. Day 2
-    1. [bash intro](./content/session2_01_bash/)
+    1. [ssh keys](./content/session2_03_sshkeys)
     1. [hpc and ozstar](./content/session2_02_hpc_ozstar/)
-1. Day 3
+1. Session 3
     1. [uv and mise](./content/session3_01_uv_mise/)
     1. [interactive computing](./content/session3_02_interactive_computing/)
     1. [good practises](./content/session3_03_good_practises/)
-1. Day 4
+1. Session 4
     1. OzSTAR tour
-1. Day 5
+1. Session 5
     1. [vscode](./content/session4_01_vscode/)
     1. [end2end workflows](./content/session4_02_end2end_workflows/)
-    1. [ssh keys](./content/session4_03_sshkeys/)
     1. Q&A
 
 ## Repo Structure

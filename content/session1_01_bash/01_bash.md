@@ -94,6 +94,7 @@ history             #display history of commands
 head <path/to/file> -n <nlines>         #display first `nlines` lines of a file 
 tail <path/to/file> -n <nlines> [-f]    #display last `nlines` lines of a file #`-f` : follow file changes
 cat  <path/to/file>                     #display file body
+less <path/to/file>                     #hybrid between `head` and `cat`
 grep <string> <path/to/file>            #find <string> in a file
 find -name <filename>                   #find file of name <filename>
 ```
@@ -104,7 +105,7 @@ find -name <filename>                   #find file of name <filename>
 touch <filename>                #create new, empty file
 mkdir <dirname>                 #create new, empty directory
 rmdir <dirname>                 #remove empty directory
-rm [-r] [-f] <path/to/object>   #remove object #`-r`: recursive (for directories) #`-f`: force
+rm [-r] [-f] [-i] <path/to/object>   #remove object #`-r`: recursive (for directories) #`-f`: force #`-i` interactive
 cp <src> <dest>                 #copy file from `src` to `dest`
 mv <src> <dest>                 #move file from `src` to `dest`
 chmod <options>                 #change permissions

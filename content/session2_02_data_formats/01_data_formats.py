@@ -5,6 +5,7 @@ from astropy.io import fits
 from astropy.table import Table
 import h5py
 from IPython.display import display
+import json
 import logging
 import matplotlib.pyplot as plt
 import numpy as np
@@ -248,6 +249,69 @@ def loadhdf5(datadir:str):
     fig.tight_layout()
 
     return
+
+def makejson(datadir:str):
+    """
+        - function to create a json file
+    """
+    #get data
+    images, lc_params, lc = cn5.gen_data(100, 0.01)
+    im1, im2, im3 = images
+    mu1, mu2, sigma1, sigma2, unique_bands = lc_params
+    measid, time, flux, flux_e, band = lc     
+
+    data = dict(
+        images=[im1.tolist(),im2.tolist(),im3.tolist()],
+        lc_params=dict(
+            mu1=mu1,
+            mu2=mu2,
+            sigma1=sigma1,
+            sigma2=sigma2,
+        ),
+        unique_bands=unique_bands,
+        lc=dict(
+            measid=measid.tolist(),
+            time=time.tolist(),
+            flux=flux.tolist(),
+            flux_e=flux_e.tolist(),
+            band=band.tolist(),
+        )
+    )
+
+    with open(f"{datadir}json_deom.json", "w") as f:
+        json.dump(data, f)
+    return
+
+def loadjson(datadir:str):
+    
+    with open(f"{datadir}json_deom.json", "r") as f:
+        data = json.load(f)
+
+    im1, im2, im3 = data["images"]
+    lc_params = data["lc_params"]
+    unq_bands = data["unique_bands"]
+    measid, time, flux, flux_e, band = map(lambda d: np.array(d), data["lc"].values())
+    im3 = np.array(im3)
+
+    #plot images
+    fig, axs = plt.subplots(1,3, sharex=False, sharey=False, subplot_kw=dict(xlabel="Pixel", ylabel="Pixel"))
+    axs[0].imshow(im1)
+    axs[1].imshow(im2)
+    axs[2].imshow(im3.astype(np.int64))
+    fig.tight_layout()
+
+    #plotting lc
+    fig, axs = plt.subplots(1,1, sharex=True, sharey=True, subplot_kw=dict(xlabel="Time", ylabel="Flux"))
+    fig.suptitle(", ".join([f"{k}={v}" for (k,v) in lc_params.items()]))
+    sm = cn5.plot_lc(axs, time,  flux,  flux_e,  band, unq_bands, "rainbow", label="HDF5")
+
+    cax = fig.add_axes([1.0, 0.12, 0.03, 0.78])
+    cbar = fig.colorbar(sm, cax=cax)
+    cbar.set_ticks(np.linspace(1, len(unq_bands), len(unq_bands))-0.5, labels=unq_bands)
+    cbar.set_label("Passband")
+    axs.legend()
+    fig.tight_layout()
+    return
 #%%main
 def main():
     makefits(f"{ROOT_PATH}data/")
@@ -256,6 +320,8 @@ def main():
     loadparquet(f"{ROOT_PATH}data/")
     makehdf5(f"{ROOT_PATH}data/")
     loadhdf5(f"{ROOT_PATH}data/")
+    makejson(f"{ROOT_PATH}data/")
+    loadjson(f"{ROOT_PATH}data/")
 
 if __name__ == "__main__":
     main()

@@ -79,3 +79,18 @@ grp = f2.create_group(<name/of/group>)                                      #cre
 dataset1 = grp.create_dataset(<name/of/dataset>, <shape>, dtype=<datatype>) #add data
 dataset2 = grp.create_dataset(<name/of/dataset>, data=<your_data_array>)    #add data
 ```
+
+---
+## Industry Standards: [JSON](https://www.json.org/json-en.html)
+* JavaScript Object Notation
+* human and machine readable
+* lightweight
+* based on key-value pairs and lists
+
+```python
+import json
+with open(<path/to/file.json>, "r") as f:
+    data = json.load(f)         #reading
+with open(<path/to/file.json>, "w") as f:
+    json.dump(data, f)          #writing
+```
