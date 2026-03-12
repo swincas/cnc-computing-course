@@ -15,10 +15,23 @@ footer: slides by Lukas Steinwender
 
 # $\LaTeX$ in [VSCode](https://code.visualstudio.com/)
 
-* follow instructions of official [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension
-    * I use their recommended configuration i.e., [TeX Live](https://www.tug.org/texlive/).
-* viewing produced pdf: `ctrl+alt+V`.
-* building pdf `ctrl+alt+B`.
+* for Linux
+    * follow instructions of official [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension
+        * I use their recommended configuration i.e., [TeX Live](https://www.tug.org/texlive/)
+* for Mac
+    * install [BasicTeX](https://www.tug.org/mactex/morepackages.html)
+    * add to path (i.e. in add to `.bash_profile`)
+        * `PATH=/usr/local/texlive/<basic_tex_version>`
+        * `PATH=/usr/local/texlive/<basic_tex_version>/bin/<...>/pdflatex  #just to be safe`
+    * install latexmk `sudo tlmgr install latexmk`
+    * add to path (i.e. in add to `.bash_profile`)
+        * `PATH=/Library/TeX/texbin/latexmk`
+    * you might have to change ownership and rights of [BasicTeX](https://www.tug.org/mactex/morepackages.html)
+        * `chown -R <username> <path/to/texlive>`
+        * `cmod 777 -R <path/to/texlive>`
+* restart [VSCode](https://code.visualstudio.com/) (maybe even your machine)
+* viewing produced pdf: `ctrl+alt+V`
+* building pdf `ctrl+alt+B`
 
 ---
 # Debugger
