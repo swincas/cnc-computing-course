@@ -71,3 +71,17 @@ Invoke-Expression -Command "$(ssh-agent -s)"    #windows
 ```bash
 ssh-add <key name>
 ```
+
+## Agent Forwarding
+
+* Setup
+```bash
+echo "Setting up agent forwarding for github"
+eval "$(ssh-agent -s)"  #get the agent
+ssh-add ~/.ssh/github	#forward github sshkey
+```
+
+* Testing (on OzStar)
+```bash
+ssh -T git@github.com
+```

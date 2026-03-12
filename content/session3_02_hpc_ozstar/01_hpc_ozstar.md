@@ -165,10 +165,10 @@ jobreport <job_id>                                              #current resourc
 * from project root run the following:
 ```bash
 source .venv/bin/activate   #activate environment
-mprof run code/session2_02_hpc_ozstar/01_resource_estimate.py
+mprof run content/session3_02_hpc_ozstar/01_resource_estimate.py
 mprof plot -o "mprofile_plot.png"
 ```
-* [01_resource_estimate.py](code/session2_02_hpc_ozstar/01_resource_estimate.py) contains
+* [01_resource_estimate.py](./01_resource_estimate.py) contains
     * function to estimate resources
     * main function to be executed
 

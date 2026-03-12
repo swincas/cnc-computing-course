@@ -48,7 +48,7 @@ uv pip compile pyproject.toml --extra cn5course --extra mpi -o requirements_mpi.
 ```
 * to compile all marp presentations to html you can use marp
     1. install the marp client
-        1. using [mise](./content/session3_01_uv_mise/01_uv_mise.md): `mise use marp-cli`
+        1. using [mise](./content/session4_01_uv_mise/01_uv_mise.md): `mise use marp-cli`
     2. call ` marp "content/**/*.md" --html --theme styles/cn5_style.css` from the repository root
 
 ## Preliminary Tasks For Attendees
@@ -69,20 +69,21 @@ git clone https://github.com/swincas/cnc-computing-course.git
     1. [bash intro](./content/session1_01_bash)
     1. [git and github](./content/session1_02_git_github)
 1. Session 2
-    1. [python and venvs](./content/session1_02_python/)
-    1. [data formats](./content/session1_03_data_formats/)
-    1. [ssh keys](./content/session2_03_sshkeys)
-    1. [hpc and ozstar](./content/session2_02_hpc_ozstar/)
+    1. [python and venvs](./content/session2_01_python/)
+    1. [data formats](./content/session2_02_data_formats/)
 1. Session 3
-    1. [uv and mise](./content/session3_01_uv_mise/)
-    1. [interactive computing](./content/session3_02_interactive_computing/)
-    1. [good practises](./content/session3_03_good_practises/)
+    1. [ssh keys](./content/session3_01_sshkeys)
+    1. [hpc and ozstar](./content/session2_02_hpc_ozstar/)
+    1. [interactive computing](./content/session3_03_interactive_computing)
 1. Session 4
     1. OzSTAR tour
 1. Session 5
-    1. [vscode](./content/session4_01_vscode/)
-    1. [end2end workflows](./content/session4_02_end2end_workflows/)
+    1. [uv and mise](./content/session4_01_uv_mise)
+    1. [good practises](./content/session4_02_good_practises)
+    1. [end2end workflows](./content/session4_03_end2end_workflows)
     1. Q&A
+1. Additional Resources
+    1. [vscode](./content/additional_resources_01_vscode)
 
 ## Repo Structure
 * [cn5_pkg/](./cn5_pkg/)
