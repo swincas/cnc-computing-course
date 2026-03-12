@@ -81,6 +81,7 @@ module load gcc/12.2.0          #compiler (required for python)
 module load python/3.11.2-bare  #minimal installation of python
 module load ipython/9.3.0       #for interactive computing
 # module load python-scientific/3.13.1-foss-2025a #scientific python packages                    
+module load openmpi/4.1.5       #message passing interface
 ```
 
 ---
