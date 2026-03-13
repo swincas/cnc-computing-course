@@ -38,6 +38,11 @@ footer: slides by Lukas Steinwender
     * requires [OpenMPI](https://docs.open-mpi.org/en/v5.0.x/index.html) to be installed
     * done for you on OzSTAR
 
+```bash
+#running scripts with mp
+mpiexec -n <num processes> python3 <path/to/your/file.py>
+```
+
 ```mermaid
 flowchart LR
     main@{ shape: rounded, label: "Main"}
