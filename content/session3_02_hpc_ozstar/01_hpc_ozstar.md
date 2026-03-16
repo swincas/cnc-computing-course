@@ -58,6 +58,10 @@ quota
 * in case `quota` are exceeded or you need specific custom software
     * use [Apptainers](https://supercomputing.swin.edu.au/docs/2-ozstar/Apptainer.html)
         * isolate anything contained
+```bash
+#uploading big data to OzStar
+rsync -avPxH --no-g --chmod=Dg+s <path/to/files> <username>@data-mover01.hpc.swin.edu.au:<path/to/remote/destination>
+```
 
 ---
 # Modules
@@ -184,15 +188,15 @@ mprof plot -o "mprofile_plot.png"
 
 #SBATCH --job-name=myjob     #job name
 
-#SBATCH --array=0-2                     #slurm array to execute multiple jobs at once
+##SBATCH --array=0-2                     #slurm array to execute multiple jobs at once
 #SBATCH --output=./execlogs/%x_%a.out
 #SBATCH --error=./execlogs/%x_%a.err
 
 #SBATCH --ntasks=1                      #number of tasks per node
 #SBATCH --mem=4G                        #total amount of memory per node (in case you are using slurm array)
-#SBATCH --time=2-00:00:00               #time limit
+#SBATCH --time=0-00:05:00               #time limit
 ##SBATCH --gres=gpu:2                    #request GPUs (amount of GPUs after colon)
-#SBATCH --tmp=150GB                     #temporary memory (if large files are acessed, loads of files are read and write)
+##SBATCH --tmp=150GB                     #temporary memory (if large files are acessed, loads of files are read and write)
 
 #load modules
 module load python-scientific/3.13.1-foss-2025a #scientific python packages

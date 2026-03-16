@@ -72,16 +72,26 @@ Invoke-Expression -Command "$(ssh-agent -s)"    #windows
 ssh-add <key name>
 ```
 
-## Agent Forwarding
+## SSH Agent Forwarding
 
-* Setup
+* allows using of [GitHub](../session1_01_git_github/01_git_github_slides.md) on [OzStar](../session2_02_hpc_ozstar/01_hpc_ozstar.md)
+* add the following to your `.bashrc` (`.bash_profile` file)
 ```bash
-echo "Setting up agent forwarding for github"
-eval "$(ssh-agent -s)"  #get the agent
-ssh-add ~/.ssh/github	#forward github sshkey
+echo "Setting up agent forwarding"      #make sure script talks to me
+eval "$(ssh-agent -s)"                  #get agent
+ssh-add ~/.ssh/github                   #forward github sshkey
 ```
 
 * Testing (on OzStar)
+```bash
+ssh -T git@github.com
+```
+
+---
+## SSH and GitHub
+* go to [GitHub > Settings > SSH and GPG keys](https://github.com/settings/keys)
+* click `new SSH key` and follow instructions
+* testing authentication
 ```bash
 ssh -T git@github.com
 ```

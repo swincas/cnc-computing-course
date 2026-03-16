@@ -110,7 +110,8 @@ cp <src> <dest>                 #copy file from `src` to `dest`
 mv <src> <dest>                 #move file from `src` to `dest`
 chmod <options> <path/to/file>  #change permissions #`-r`: recursive, `777` all permissions for everyone
 du -h --max-depth=<n> <path/to/dir> #disk usage up to `n` child directories
-ln -s <path/to/dir> <path/to/link/dest> #symbolic link (shortcut) to `dir` in `dest`                            
+ln -s <path/to/dir> <path/to/link/dest> #symbolic link (shortcut) to `dir` in `dest`
+unlink <symlink name>                   #removes symlink without modifying original directory
 ```
 > **NEVER** remove the French language pack:
 > `sudo rm -fr /*`
