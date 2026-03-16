@@ -25,11 +25,11 @@ footer: slides by Lukas Steinwender
 # Startup Files and `.bashrc`
 * startup files
     * `/etc/profile`
-    * `~/.bash_profile`
+    * `~/.bash_profile` (typically used on Mac)
     * `~/.bash_login`
     * `~/.profile`
     * `~/.bash_logout`
-    * `~/.bashrc`
+    * `~/.bashrc` (typically used on Linux)
 * called whenever a new session is launched
 * can call other scripts from within them
 * allows for detailed customization of your [Bash](#bash-bourne-again-shell) experience
@@ -108,11 +108,11 @@ rmdir <dirname>                 #remove empty directory
 rm [-r] [-f] [-i] <path/to/object>   #remove object #`-r`: recursive (for directories) #`-f`: force #`-i` interactive
 cp <src> <dest>                 #copy file from `src` to `dest`
 mv <src> <dest>                 #move file from `src` to `dest`
-chmod <options>                 #change permissions
+chmod <options> <path/to/file>  #change permissions #`-r`: recursive, `777` all permissions for everyone
 du -h --max-depth=<n> <path/to/dir> #disk usage up to `n` child directories
 ln -s <path/to/dir> <path/to/link/dest> #symbolic link (shortcut) to `dir` in `dest`                            
 ```
-> **NEVER** remove the french language pack:
+> **NEVER** remove the French language pack:
 > `sudo rm -fr /*`
 
 
