@@ -137,3 +137,9 @@ quota       #list available storage resources (on OzStar)
 
 > `ctrl+r`: the most powerful Bash command
 > (besides `sudo`)
+
+---
+# Let's Set Up a [.bashrc](../session1_01_bash/01_bash.md)!
+* add an alias `alias ls="ls -i"`
+* see [here](https://docs.google.com/document/d/10zNH9BbziPgwLjHjOE7q30k18tLaAqfUVXmXC-0hBxg/edit?usp=sharing) in case of difficulties
+

@@ -32,7 +32,7 @@ $$\textcolor{red}{\text{\large unfortunately NOT useable on OzStar (quota limit)
 
 ## Global Setup
 
-* [installation](https://mise.jdx.dev/getting-started.html)
+* [installation](https://mise.jdx.dev/getting-started.html) (see [here](https://docs.google.com/document/d/10zNH9BbziPgwLjHjOE7q30k18tLaAqfUVXmXC-0hBxg/edit?usp=sharing) in case of difficulties)
 ```bash
 curl https://mise.run | sh
 ~/.local/bin/mise --version                                     #testing
