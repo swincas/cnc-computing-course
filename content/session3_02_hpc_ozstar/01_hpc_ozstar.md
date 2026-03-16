@@ -100,7 +100,7 @@ module load openmpi/4.1.5       #message passing interface
 * running terminal processes in background
 
 ```
-screen -S <name>    #start new session with name `name`
+screen -S <name>    #start new session with name `name`                                     
 screen -R <name>    #connect if existing, else create new
 screen -r <name>    #connect to existing screen
 screen -ls          #list active screen sessions
@@ -110,6 +110,7 @@ screen -X -S <name> #force kill a session
 * keybindings
     * `ctrl+a+d` ... detach from current session
     * `ctrl+d` ... quit current session
+* try the example scripts: [bash_slurm_example1.sh](../../bash_scripts/bash_slurm_example1.sh), [bash_slurm_example2.sh](../../bash_scripts/bash_slurm_example2.sh)
 
 > even if you're logged out, your screen keeps running
 
@@ -202,11 +203,17 @@ mprof plot -o "mprofile_plot.png"
 module load python-scientific/3.13.1-foss-2025a #scientific python packages
 
 #run your stuff
-cp /path/to/file.txt $JOBFS             #copy large files to temporary directory
+# cp /path/to/file.txt $JOBFS             #copy large files to temporary directory
 
 source ~/<path2env>/bash/bin/activate   #activate environment
 python3 <path2file.py>                  #run your files
 deactivate                              #deactivate environment
 
-cp $JOBFS/path/to/output.txt /path/to/target/directory #don't forget to copy your results back                                      
+# cp $JOBFS/path/to/output.txt /path/to/target/directory #don't forget to copy your results back                                      
 ```
+
+---
+## Action!
+>   1. Launch Your First Job!
+>       * you can try the example scripts: [bash_slurm_example1.sh](../../bash_scripts/bash_slurm_example1.sh), [bash_slurm_example2.sh](../../bash_scripts/bash_slurm_example2.sh)
+>       * you can create your own little script

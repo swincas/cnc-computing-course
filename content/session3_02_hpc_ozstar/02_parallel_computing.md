@@ -39,7 +39,7 @@ footer: slides by Lukas Steinwender
     * done for you on OzSTAR
 
 ```bash
-#running scripts with mp
+#running scripts with mpi
 mpiexec -n <num processes> python3 <path/to/your/file.py>
 ```
 

@@ -134,7 +134,6 @@ gitGraph
 ## Pull Requests
 ![h: 50%](../../gfx/fork_github.png)
 
-
 * [fork](#fork-new-isolated-copy) repository you want to contribute to
 * `git clone` [forked repo](#fork-new-isolated-copy) to your local machine
 * create new working branch: `git checkout -b <your feature>`
@@ -344,6 +343,7 @@ git commit -m "Convert submodule to regular directory"
     * `Source Control` (shipped by default)
     * [VSCode](https://code.visualstudio.com/) settings sync
         * through login with [GitHub](https://github.com/) account
+    * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 ---
 # Action!

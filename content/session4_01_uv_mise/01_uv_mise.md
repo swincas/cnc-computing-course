@@ -91,7 +91,7 @@ mise set MY_VAR=123
 <br>
 
 $$\textcolor{red}{\text{\large unfortunately NOT useable on OzStar (quota limit)}}$$
-$$\textcolor{green}{\text{\large but there's a workaround ;)}}$$
+$$\textcolor{green}{\text{\large but there is a workaround ;)}}$$
 
 ---
 ## Workflow
