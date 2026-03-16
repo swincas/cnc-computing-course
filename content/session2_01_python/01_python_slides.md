@@ -41,6 +41,7 @@ footer: slides created Lukas Steinwender
 
 * isolate project from operating system
     * prevents breaks when installing packages somewhere else
+* shareable
 * can easily be done with [venv](#venv) package
 
 

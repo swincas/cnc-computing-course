@@ -64,6 +64,20 @@ git log --graph --oneline --decorate --all --color
 ```
 
 ---
+## Repository Layout
+
+* `.git/` directory
+    * [GitHub](https://github.com/)s way of tracking changes, branches, etc.
+* `.gitignore`
+    * powerful file specifying what shall and shall not be tracked
+* `README.md` (optional - but basically **required**)
+    * essentially welcome page
+    * project outline and summary
+    * quick reference
+* `LICENSE` (optional)
+    * license file for publishing
+
+---
 
 ## Rebase vs Merge
 
@@ -120,6 +134,7 @@ gitGraph
 ## Pull Requests
 ![h: 50%](../../gfx/fork_github.png)
 
+
 * [fork](#fork-new-isolated-copy) repository you want to contribute to
 * `git clone` [forked repo](#fork-new-isolated-copy) to your local machine
 * create new working branch: `git checkout -b <your feature>`
@@ -159,6 +174,7 @@ gitGraph
     merge feature2 id: "v2.0"
     merge feature3 id: "v3.0"
 ```
+
 * lightweight
 * small projects
 * straightforward
@@ -168,47 +184,49 @@ gitGraph
 ---
 
 ## Git Flow
+<!-- <div class="mermaid"> -->
 ```mermaid
-    gitGraph
-        commit id: "v0.1"
-        %%setup long-lived branches
-        branch hotfix order: 2
-        branch dev order: 3
-        %%add commit history
-        checkout dev
-            commit id: "new feature1"
-        checkout hotfix
-            commit id: "fix1"
-        checkout main
-            merge hotfix id: "v0.2"
-        checkout dev
-            branch feature1 order: 5
-        checkout feature1
-            commit id: "feature1.1"
-        checkout dev
-            commit id: "new feature2"
-            branch feature2 order: 4
-        checkout feature2
-            commit id: "feature2.1"
-        checkout dev
-            merge hotfix
-        checkout feature2
-            commit id: "feature2.2"
-        checkout feature1
-            commit id: "feature1.2"
-        checkout dev
-            merge feature2
-        branch release order: 2
-        checkout release
-            commit id: "release testing"
-            commit id: "release bug fixes"
-        checkout main
-            merge release id: "v1.0"
-        checkout dev
-            merge release
-        checkout feature1
-            commit id: "feature1.3"
+gitGraph
+    commit id: "v0.1"
+    %%setup long-lived branches
+    branch hotfix order: 2
+    branch dev order: 3
+    %%add commit history
+    checkout dev
+        commit id: "new feature1"
+    checkout hotfix
+        commit id: "fix1"
+    checkout main
+        merge hotfix id: "v0.2"
+    checkout dev
+        branch feature1 order: 5
+    checkout feature1
+        commit id: "feature1.1"
+    checkout dev
+        commit id: "new feature2"
+        branch feature2 order: 4
+    checkout feature2
+        commit id: "feature2.1"
+    checkout dev
+        merge hotfix
+    checkout feature2
+        commit id: "feature2.2"
+    checkout feature1
+        commit id: "feature1.2"
+    checkout dev
+        merge feature2
+    branch release order: 2
+    checkout release
+        commit id: "release testing"
+        commit id: "release bug fixes"
+    checkout main
+        merge release id: "v1.0"
+    checkout dev
+        merge release
+    checkout feature1
+        commit id: "feature1.3"
 ```
+<!-- </div> -->
 
 * more complex
 * allows parallel development

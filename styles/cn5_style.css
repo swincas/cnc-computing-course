@@ -5,9 +5,25 @@
 
 /* ################################################################## */
 /* base style */
+html, body {
+	color: #ffffff;
+}
 section {
 	background-color: #000000;
 	color: rgb(255, 255, 255);
+}
+header {
+	grid-area: header;
+}
+nav {
+	grid-area: nav;
+}
+main {
+	grid-area: main;
+}
+footer {
+	grid-area: footer;
+	color: #974D13;
 }
 
 /* ################################################################## */

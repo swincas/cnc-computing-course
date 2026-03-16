@@ -62,6 +62,7 @@ quota
 #uploading big data to OzStar
 rsync -avPxH --no-g --chmod=Dg+s <path/to/files> <username>@data-mover01.hpc.swin.edu.au:<path/to/remote/destination>
 ```
+
 ---
 # Modules
 * prepackaged stacks of software
@@ -84,6 +85,7 @@ module load gcc/12.2.0          #compiler (required for python)
 module load python/3.11.2-bare  #minimal installation of python
 module load ipython/9.3.0       #for interactive computing
 # module load python-scientific/3.13.1-foss-2025a #scientific python packages                    
+module load openmpi/4.1.5       #message passing interface
 ```
 
 ---
@@ -168,10 +170,10 @@ jobreport <job_id>                                              #current resourc
 * from project root run the following:
 ```bash
 source .venv/bin/activate   #activate environment
-mprof run code/session2_02_hpc_ozstar/01_resource_estimate.py
+mprof run content/session3_02_hpc_ozstar/01_resource_estimate.py
 mprof plot -o "mprofile_plot.png"
 ```
-* [01_resource_estimate.py](content/session2_02_hpc_ozstar/01_resource_estimate.py) contains
+* [01_resource_estimate.py](./01_resource_estimate.py) contains
     * function to estimate resources
     * main function to be executed
 
@@ -192,9 +194,9 @@ mprof plot -o "mprofile_plot.png"
 
 #SBATCH --ntasks=1                      #number of tasks per node
 #SBATCH --mem=4G                        #total amount of memory per node (in case you are using slurm array)
-#SBATCH --time=2-00:00:00               #time limit
+#SBATCH --time=0-00:05:00               #time limit
 ##SBATCH --gres=gpu:2                    #request GPUs (amount of GPUs after colon)
-#SBATCH --tmp=150GB                     #temporary memory (if large files are acessed, loads of files are read and write)
+##SBATCH --tmp=150GB                     #temporary memory (if large files are acessed, loads of files are read and write)
 
 #load modules
 module load python-scientific/3.13.1-foss-2025a #scientific python packages

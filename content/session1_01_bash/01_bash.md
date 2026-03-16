@@ -25,11 +25,11 @@ footer: slides by Lukas Steinwender
 # Startup Files
 * names and locations:
     * `/etc/profile`
-    * `~/.bash_profile`
+    * `~/.bash_profile` (typically used on Mac)
     * `~/.bash_login`
     * `~/.profile`
     * `~/.bash_logout`
-    * `~/.bashrc`
+    * `~/.bashrc` (typically used on Linux)
 * called whenever a new session is launched
 * can call other scripts from within them
 * allows for detailed customization of your [Bash](#bash-bourne-again-shell) experience
@@ -94,6 +94,7 @@ history             #display history of commands
 head <path/to/file> -n <nlines>         #display first `nlines` lines of a file 
 tail <path/to/file> -n <nlines> [-f]    #display last `nlines` lines of a file #`-f` : follow file changes
 cat  <path/to/file>                     #display file body
+less <path/to/file>                     #hybrid between `head` and `cat`
 grep <string> <path/to/file>            #find <string> in a file
 find -name <filename>                   #find file of name <filename>
 ```
@@ -104,15 +105,15 @@ find -name <filename>                   #find file of name <filename>
 touch <filename>                #create new, empty file
 mkdir <dirname>                 #create new, empty directory
 rmdir <dirname>                 #remove empty directory
-rm [-r] [-f] <path/to/object>   #remove object #`-r`: recursive (for directories) #`-f`: force
+rm [-r] [-f] [-i] <path/to/object>   #remove object #`-r`: recursive (for directories) #`-f`: force #`-i` interactive
 cp <src> <dest>                 #copy file from `src` to `dest`
 mv <src> <dest>                 #move file from `src` to `dest`
-chmod <options>                 #change permissions
+chmod <options> <path/to/file>  #change permissions #`-r`: recursive, `777` all permissions for everyone
 du -h --max-depth=<n> <path/to/dir> #disk usage up to `n` child directories
 ln -s <path/to/dir> <path/to/link/dest> #symbolic link (shortcut) to `dir` in `dest`
 unlink <symlink name>                   #removes symlink without modifying original directory
 ```
-> **NEVER** remove the french language pack:
+> **NEVER** remove the French language pack:
 > `sudo rm -fr /*`
 
 
@@ -137,3 +138,9 @@ quota       #list available storage resources (on OzStar)
 
 > `ctrl+r`: the most powerful Bash command
 > (besides `sudo`)
+
+---
+# Let's Set Up a [.bashrc](../session1_01_bash/01_bash.md)!
+* add an alias `alias ls="ls -i"`
+* see [here](https://docs.google.com/document/d/10zNH9BbziPgwLjHjOE7q30k18tLaAqfUVXmXC-0hBxg/edit?usp=sharing) in case of difficulties
+

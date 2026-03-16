@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cn5</title>
+
+    <link rel="stylesheet" href="styles/cn5_style.css">
+
+    <style>
+        :root {
+
+        }
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: grid;
+            overflow-y: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "header header"
+                "main nav"
+                "footer footer"
+            ;
+            background-image: url("./gfx/TitlePage.png");
+            background-size: cover;
+        }
+        header h1 {
+            font-size: 4rem;
+            justify-self: center;
+        }
+        nav {
+            font-size: 2.3rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CAS Cookies and Code Computing Course (CN5)</h1>
+    </header>
+    <nav>
+        <ol>
+            <li>Session 1 <ol>
+                <li><a href="./content/session1_01_bash/01_bash.html">bash intro</a></li>
+                <li><a href="./content/session1_02_git_github/01_git_github_slides.html">git and github</a></li>
+            </ol></li>
+            <li>Session 2 <ol>
+                <li><a href="./content/session2_01_python/01_python_slides.html">python and venvs</a></li>
+                <li><a href="./content/session2_02_data_formats/01_data_formats.html">data formats</a></li>
+            </ol></li>
+            <li>Session 3 <ol>
+                <li><a href="./content/session3_01_sshkeys/01_sshkeys.html">ssh keys</a></li>
+                <li><a href="./content/session3_02_hpc_ozstar/01_hpc_ozstar.html">hpc and ozstar</a></li>
+                <li><a href="./content/session3_02_hpc_ozstar/02_parallel_computing.html">parallel computing</a></li>
+                <li><a href="./content/session3_03_interactive_computing/01_interactive_computing.html">interactive computing</a></li>
+            </ol></li>
+            <li>Session 4 <ol>
+                <li>OzSTAR tour</li>
+            </ol></li>
+            <li>Session 5 <ol>
+                <li><a href="./content/session4_01_uv_mise/01_uv_mise.html">uv and mise</a></li>
+                <li><a href="./content/session4_02_good_practises/01_good_practises.html">good practises</a></li>
+                <li><a href="./content/session4_03_end2end_workflows/01_combine.html">end2end workflows</a></li>
+                <li>Q&A</li>
+            </ol></li>
+            <li>Additional Resources<ol>
+                <li><a href="./content/additional_resources_01_vscode/01_vscode.html">vscode</a></li>
+            </ol></li>
+        </ol>
+    </nav>
+    <main>
+
+    </main>
+    <footer>
+        Image generated with ChatGPT
+    </footer>
+</body>
+</html>
