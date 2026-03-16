@@ -278,8 +278,8 @@ def makejson(datadir:str):
         )
     )
 
-    with open(f"{datadir}json_deom.json", "w") as f:
-        json.dump(data, f)
+    with open(f"{datadir}json_demo.json", "w") as f:
+        json.dump(data, f, indent=2)
     return
 
 def loadjson(datadir:str):
@@ -314,12 +314,12 @@ def loadjson(datadir:str):
     return
 #%%main
 def main():
-    makefits(f"{ROOT_PATH}data/")
-    loadfits(f"{ROOT_PATH}data/")
-    makeparquet(f"{ROOT_PATH}data/")
-    loadparquet(f"{ROOT_PATH}data/")
-    makehdf5(f"{ROOT_PATH}data/")
-    loadhdf5(f"{ROOT_PATH}data/")
+    # makefits(f"{ROOT_PATH}data/")
+    # loadfits(f"{ROOT_PATH}data/")
+    # makeparquet(f"{ROOT_PATH}data/")
+    # loadparquet(f"{ROOT_PATH}data/")
+    # makehdf5(f"{ROOT_PATH}data/")
+    # loadhdf5(f"{ROOT_PATH}data/")
     makejson(f"{ROOT_PATH}data/")
     loadjson(f"{ROOT_PATH}data/")
 

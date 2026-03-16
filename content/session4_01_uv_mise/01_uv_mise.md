@@ -99,6 +99,7 @@ $$\textcolor{green}{\text{\large but there's a workaround ;)}}$$
 ```bash
 uv init <project-name>
 uv init <project-name> --bare    #minimal project
+uv init <project-name> --lib     #library
 ```
 * add packages
 ```bash

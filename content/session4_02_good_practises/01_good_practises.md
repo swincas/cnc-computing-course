@@ -112,10 +112,10 @@ flowchart LR
     * checkout [this repo](https://github.com/TheRedElement/RepoTemplate_LuSt/blob/main/code/_projectbuildingblocks.py) for a template
 * catalog sets of function with similar context into importable modules
     * checkout [this repo](https://github.com/TheRedElement/LuStCodeSnippets/blob/dev/lust_codesnippets_py/astronomy/absmag.py) for an example
-    * [logging](./../session1_02_python/01_python_slides.md) for insight and debugging
+    * [logging](./../session2_01_python/01_python_slides.md) for insight and debugging
 
 # Testing
-* remember [session1_02_python](../session1_02_python/)?
+* remember [session2_01_python](../session2_01_python/01_python_slides.md)?
     * [cn5_test.py](../../test/cn5_test.py) was the example we had
 ---
 # 3-Step Process
@@ -134,7 +134,7 @@ flowchart LR
 # Conquer the Commandline
 
 * powerful for code that is executed often
-* [uv](./../session3_01_uv_mise/01_uv_mise.md) allows easy creation of commandline tools
+* [uv](./../session4_01_uv_mise/01_uv_mise.md) allows easy creation of commandline tools
 > use a separate uv project for each commandline tool
 
 * can also be done using python
