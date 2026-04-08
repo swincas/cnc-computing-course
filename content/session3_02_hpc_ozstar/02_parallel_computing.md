@@ -6,7 +6,7 @@ footer: slides by Lukas Steinwender
 
 <!-- _class: titleslide -->
 # Compute
-## Parallel Computation and GPU
+## Multi Processing and GPU
 
 ![bg](../../gfx/TitlePage.png)
 <div class="footnote">Image generated with ChatGPT</div>
@@ -18,15 +18,33 @@ footer: slides by Lukas Steinwender
 * easy to parallelize
 
 ---
+# Parallelism vs Concurrency
+
+## Parallel Computing
+* tasks executed truly at the same time (true parallelism)
+	* i.e. on different cores
+
+## Concurrent Processing
+* mimics [Parallel Computing](#Parallel%20Computing)
+	* executes task by switching between different tasks
+	* gives the impression parallelism
+* likely only uses a single core
+
+
+---
 <!-- thread: each core can have several threads (each chrome tab is a thread) -->
 # Threading
 * easy to set up
     * no extra installs required
 * good for [embarassingly parallel problems](#embarassingly-parallel-problems)
 * shared memory
-* can only use a single machine
-    * but multiple cores
+* can only use a single cpu but multiple cores
 * [Python](../session1_02_python/01_python_slides.md): [joblib](https://joblib.readthedocs.io)
+
+> [Threading](#Threading) is usually **NOT** truly parallel but concurrent.
+> It can be truly parallel if
+> * you are on a multi-core CPU
+> * your runtime allows threads to be executed simultaneously
 
 ---
 # MPI (Message Passing Interface)
